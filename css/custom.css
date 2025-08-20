@@ -1,0 +1,432 @@
+/* 奶茶味的香草 - 自定义样式 */
+
+/* ========== 全局背景设置 ========== */
+/* 设置全局背景图片 */
+#web_bg {
+  background-image: url('https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E946B2AD0E7261BA41AC98B8ACC234D8.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* 为了保持内容可读性，在背景上添加轻微遮罩 */
+#web_bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1) !important; /* 浅色半透明遮罩 */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 深色模式下的背景遮罩调整 */
+[data-theme="dark"] #web_bg::before {
+  background: rgba(0, 0, 0, 0.3) !important; /* 深色模式下使用深色遮罩 */
+}
+
+/* 确保内容层级正确 */
+#body-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== 导航栏背景优化 ========== */
+/* 解决导航栏透明导致文字不清晰的问题 */
+
+/* 导航栏非固定状态 - 添加奶茶色半透明背景 */
+#page-header:not(.nav-fixed) #nav {
+  background: rgba(250, 240, 230, 0.85) !important; /* 奶茶色半透明背景 */
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(210, 180, 140, 0.3) !important;
+  box-shadow: 0 2px 10px rgba(210, 180, 140, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 导航栏固定状态 - 增强背景 */
+#page-header.nav-fixed #nav {
+  background: rgba(250, 240, 230, 0.95) !important; /* 更不透明的背景 */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  outline: 1px solid rgba(210, 180, 140, 0.4) !important;
+  box-shadow: 0 4px 20px rgba(210, 180, 140, 0.3) !important;
+}
+
+/* 深色模式导航栏 - 非固定状态 */
+[data-theme="dark"] #page-header:not(.nav-fixed) #nav {
+  background: rgba(24, 23, 29, 0.85) !important; /* 深色半透明背景 */
+  border-bottom: 1px solid rgba(139, 115, 85, 0.3) !important;
+  box-shadow: 0 2px 10px rgba(139, 115, 85, 0.2) !important;
+}
+
+/* 深色模式导航栏 - 固定状态 */
+[data-theme="dark"] #page-header.nav-fixed #nav {
+  background: rgba(24, 23, 29, 0.95) !important; /* 更不透明的深色背景 */
+  outline: 1px solid rgba(139, 115, 85, 0.4) !important;
+  box-shadow: 0 4px 20px rgba(139, 115, 85, 0.3) !important;
+}
+
+/* 导航栏文字可读性优化 */
+#nav #blog_name a,
+#nav #menus a,
+#nav #nav-right a,
+#nav .site-page {
+  color: #8B7355 !important; /* 深奶茶色，确保在浅色背景上清晰 */
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 导航栏文字悬停效果 */
+#nav #blog_name a:hover,
+#nav #menus a:hover,
+#nav #nav-right a:hover {
+  color: #FFFFFF !important;
+  background: rgba(210, 180, 140, 0.9) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(210, 180, 140, 0.4) !important;
+}
+
+/* 深色模式导航栏文字 */
+[data-theme="dark"] #nav #blog_name a,
+[data-theme="dark"] #nav #menus a,
+[data-theme="dark"] #nav #nav-right a,
+[data-theme="dark"] #nav .site-page {
+  color: #F5DEB3 !important; /* 浅奶茶色，确保在深色背景上清晰 */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* 深色模式导航栏文字悬停效果 */
+[data-theme="dark"] #nav #blog_name a:hover,
+[data-theme="dark"] #nav #menus a:hover,
+[data-theme="dark"] #nav #nav-right a:hover {
+  color: #FFFFFF !important;
+  background: rgba(139, 115, 85, 0.9) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.4) !important;
+}
+
+/* 页脚真正的边缘羽化效果 - 模糊+透明度遮罩 */
+#footer {
+  background: var(--anzhiyu-card-bg) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+
+  /* 使用 mask 实现边缘羽化 - 上边缘模糊过渡 */
+  -webkit-mask:
+    linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,0.1) 3%,
+      rgba(0,0,0,0.3) 8%,
+      rgba(0,0,0,0.6) 15%,
+      rgba(0,0,0,0.9) 25%,
+      rgba(0,0,0,1) 35%,
+      rgba(0,0,0,1) 100%
+    ) !important;
+  mask:
+    linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,0.1) 3%,
+      rgba(0,0,0,0.3) 8%,
+      rgba(0,0,0,0.6) 15%,
+      rgba(0,0,0,0.9) 25%,
+      rgba(0,0,0,1) 35%,
+      rgba(0,0,0,1) 100%
+    ) !important;
+
+  /* 添加边缘模糊效果 */
+  filter: blur(0px) !important;
+}
+
+/* 为页脚上边缘添加额外的模糊羽化层 */
+#footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--anzhiyu-card-bg);
+  filter: blur(8px) !important;
+  -webkit-filter: blur(8px) !important;
+  opacity: 0.6;
+  z-index: -1;
+
+  /* 为模糊层也添加遮罩 */
+  -webkit-mask:
+    linear-gradient(to bottom,
+      rgba(0,0,0,0.8) 0%,
+      rgba(0,0,0,0.4) 50%,
+      transparent 100%
+    );
+  mask:
+    linear-gradient(to bottom,
+      rgba(0,0,0,0.8) 0%,
+      rgba(0,0,0,0.4) 50%,
+      transparent 100%
+    );
+}
+
+/* 深色模式页脚边缘羽化效果 - 相同的模糊+透明度遮罩 */
+[data-theme="dark"] #footer {
+  background: var(--anzhiyu-card-bg) !important;
+
+  /* 深色模式使用相同的遮罩羽化效果 */
+  -webkit-mask:
+    linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,0.1) 3%,
+      rgba(0,0,0,0.3) 8%,
+      rgba(0,0,0,0.6) 15%,
+      rgba(0,0,0,0.9) 25%,
+      rgba(0,0,0,1) 35%,
+      rgba(0,0,0,1) 100%
+    ) !important;
+  mask:
+    linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,0.1) 3%,
+      rgba(0,0,0,0.3) 8%,
+      rgba(0,0,0,0.6) 15%,
+      rgba(0,0,0,0.9) 25%,
+      rgba(0,0,0,1) 35%,
+      rgba(0,0,0,1) 100%
+    ) !important;
+}
+
+/* 深色模式的模糊羽化层 */
+[data-theme="dark"] #footer::before {
+  background: var(--anzhiyu-card-bg);
+}
+
+/* 页脚内容包装器 - 保持透明，让#footer的羽化效果显现 */
+#footer-wrap {
+  background: transparent !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  border-radius: 8px !important;
+  padding: 40px 20px !important;
+  position: relative !important;
+  transition: background 0.3s ease !important;
+}
+
+/* 深色模式页脚内容包装器 - 同样保持透明 */
+[data-theme="dark"] #footer-wrap {
+  background: transparent !important;
+}
+
+
+
+/* 页脚栏 - 浅色模式 */
+#footer-bar {
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 240, 230, 0.8) 0%,    /* 顶部承接#footer-wrap的底部透明度 */
+    rgba(210, 180, 140, 1) 100%     /* 底部完全不透明奶茶色 */
+  ) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+  border: none !important; /* 移除边框，实现无缝衔接 */
+  margin-top: 0 !important; /* 确保无间隙 */
+  transition: background 0.3s ease !important;
+}
+
+/* 页脚栏 - 深色模式 */
+[data-theme="dark"] #footer-bar {
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 23, 29, 0.8) 0%,       /* 深色模式顶部承接#footer-wrap */
+    rgba(18, 18, 25, 1) 100%        /* 深色模式底部完全不透明 */
+  ) !important;
+}
+
+/* 徽章栏与页脚栏的视觉衔接优化 */
+#footer .footer-group,
+#footer .bdage-group {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(1px) !important;
+  -webkit-backdrop-filter: blur(1px) !important;
+  border-radius: 6px !important;
+  padding: 15px !important;
+  margin-bottom: 15px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 页脚组件悬停效果 */
+#footer .footer-group:hover,
+#footer .bdage-group:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* 页脚文字颜色优化 - 浅色模式 */
+#footer,
+#footer * {
+  color: #8B7355 !important; /* 深奶茶色 */
+  transition: color 0.3s ease !important;
+}
+
+/* 页脚文字颜色 - 深色模式 */
+[data-theme="dark"] #footer,
+[data-theme="dark"] #footer * {
+  color: #F5DEB3 !important; /* 浅奶茶色，适合深色背景 */
+}
+
+/* 页脚链接颜色 - 浅色模式 */
+#footer a {
+  color: #CD853F !important;
+  transition: color 0.3s ease !important;
+}
+
+#footer a:hover {
+  color: #D2B48C !important;
+}
+
+/* 页脚链接颜色 - 深色模式 */
+[data-theme="dark"] #footer a {
+  color: #DEB887 !important; /* 深色模式下的链接颜色 */
+}
+
+[data-theme="dark"] #footer a:hover {
+  color: #F5DEB3 !important; /* 深色模式下的悬停颜色 */
+}
+
+/* 社交栏样式优化 - 浅色模式 */
+#footer .footer-social-bar,
+.footer-social-bar {
+  background: rgba(255, 255, 255, 0.15) !important; /* 更透明，让渐变显现 */
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  border-radius: 12px !important;
+  padding: 15px !important;
+  margin: 15px 0 !important;
+  border: 1px solid rgba(210, 180, 140, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 社交栏样式 - 深色模式 */
+[data-theme="dark"] #footer .footer-social-bar,
+[data-theme="dark"] .footer-social-bar {
+  background: rgba(255, 255, 255, 0.05) !important; /* 深色模式下更暗 */
+  border: 1px solid rgba(139, 115, 85, 0.3) !important;
+}
+
+/* 社交栏悬停效果 - 浅色模式 */
+#footer .footer-social-bar:hover,
+.footer-social-bar:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(210, 180, 140, 0.4) !important;
+}
+
+/* 社交栏悬停效果 - 深色模式 */
+[data-theme="dark"] #footer .footer-social-bar:hover,
+[data-theme="dark"] .footer-social-bar:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(139, 115, 85, 0.5) !important;
+}
+
+/* 社交链接图标优化 - 浅色模式 */
+#footer .footer-social-bar a,
+.footer-social-bar a {
+  background: rgba(210, 180, 140, 0.3) !important;
+  border-radius: 50% !important;
+  padding: 10px !important;
+  margin: 0 8px !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* 社交链接图标 - 深色模式 */
+[data-theme="dark"] #footer .footer-social-bar a,
+[data-theme="dark"] .footer-social-bar a {
+  background: rgba(139, 115, 85, 0.4) !important;
+  color: #F5DEB3 !important;
+}
+
+/* 社交图标悬停效果 - 浅色模式 */
+#footer .footer-social-bar a:hover,
+.footer-social-bar a:hover {
+  background: rgba(210, 180, 140, 0.7) !important;
+  transform: translateY(-3px) scale(1.1) !important;
+  box-shadow: 0 4px 12px rgba(210, 180, 140, 0.4) !important;
+}
+
+/* 社交图标悬停效果 - 深色模式 */
+[data-theme="dark"] #footer .footer-social-bar a:hover,
+[data-theme="dark"] .footer-social-bar a:hover {
+  background: rgba(139, 115, 85, 0.8) !important;
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.6) !important;
+  color: #F5DEB3 !important;
+}
+
+/* 运行时间显示优化 - 与渐变背景协调 */
+#runtime {
+  background: linear-gradient(
+    135deg,
+    rgba(210, 180, 140, 0.9) 0%,
+    rgba(250, 240, 230, 0.9) 100%
+  ) !important;
+  color: #8B7355 !important;
+  border: 1px solid rgba(210, 180, 140, 0.6) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+  box-shadow: 0 2px 8px rgba(210, 180, 140, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 运行时间悬停效果 */
+#runtime:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(210, 180, 140, 0.4) !important;
+}
+
+/* 深色模式下的运行时间 */
+[data-theme="dark"] #runtime {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 115, 85, 0.9) 0%,
+    rgba(101, 84, 63, 0.9) 100%
+  ) !important;
+  color: #F5DEB3 !important;
+  border-color: rgba(139, 115, 85, 0.6) !important;
+  box-shadow: 0 2px 12px rgba(210, 180, 140, 0.6) !important;
+}
+
+/* 页脚文字内容优化 */
+#footer-wrap .footer-text,
+#footer-wrap p {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 页脚链接增强效果 */
+#footer-wrap a {
+  position: relative !important;
+  text-decoration: none !important;
+}
+
+#footer-wrap a::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #CD853F, #D2B48C) !important;
+  transition: width 0.3s ease !important;
+}
+
+#footer-wrap a:hover::after {
+  width: 100% !important;
+}

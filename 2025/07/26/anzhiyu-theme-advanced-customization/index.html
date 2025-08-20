@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>AnZhiYu主题深度美化指南 - 打造独一无二的个人博客 | Mike_Tea</title><meta name="keywords" content="AnZhiYu, 主题美化, CSS定制, 博客个性化, Hexo美化, 前端设计"><meta name="author" content="奶茶味の香草"><meta name="copyright" content="奶茶味の香草"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#FAF0E6"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="AnZhiYu主题深度美化指南 - 打造独一无二的个人博客"><meta name="application-name" content="AnZhiYu主题深度美化指南 - 打造独一无二的个人博客"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#FAF0E6"><meta property="og:type" content="article"><meta property="og:title" content="AnZhiYu主题深度美化指南 - 打造独一无二的个人博客"><meta property="og:url" content="https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/index.html"><meta property="og:site_name" content="Mike_Tea"><meta property="og:description" content="深入探索AnZhiYu主题的高级美化技巧，从色彩搭配到动画效果，从布局优化到交互体验，全方位打造属于你的独特博客风格。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E946B2AD0E7261BA41AC98B8ACC234D8.jpg"><meta property="article:author" content="奶茶味の香草"><meta property="article:tag" content="生活,技术,分享,日常,奶茶味的香草"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E946B2AD0E7261BA41AC98B8ACC234D8.jpg"><meta name="description" content="深入探索AnZhiYu主题的高级美化技巧，从色彩搭配到动画效果，从布局优化到交互体验，全方位打造属于你的独特博客风格。"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":true,"limitCount":50,"languages":{"author":"作者: 奶茶味の香草","link":"链接: ","source":"来源: Mike_Tea","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Mike_Tea',
+  title: 'AnZhiYu主题深度美化指南 - 打造独一无二的个人博客',
+  postAI: '这篇文章深入介绍了AnZhiYu主题的高级美化技巧和定制方法,包含色彩搭配、动画效果、布局优化等多个方面的实用技巧,适合已经掌握基础配置，想要进一步美化博客的开发者',
+  pageFillDescription: '🎨 1. 色彩主题深度定制, 1.1 创建专属色彩方案, 1.2 自定义CSS变量, 🌟 2. 页面布局优化, 2.1 首页轮播图美化, 2.2 卡片样式定制, 🎭 3. 动画效果增强, 3.1 页面加载动画, 3.2 导航栏动效, 🖼️ 4. 背景与视觉效果, 4.1 动态背景设置, 4.2 粒子效果背景, 📱 5. 响应式设计优化, 5.1 移动端适配, 5.2 平板端适配, 🎪 6. 特殊功能定制, 6.1 自定义页脚, 6.2 侧边栏小组件美化, 🔧 7. 性能优化技巧, 7.1 图片懒加载, 7.2 代码压缩, 🎯 8. 用户体验提升, 8.1 阅读进度条, 8.2 返回顶部按钮美化, 🎨 9. 主题色彩搭配建议, 9.1 温暖色系, 9.2 清新色系, 9.3 优雅色系, 📝 10. 总结与建议在掌握了主题的基础配置后是时候让你的博客更上一层楼了本文将带你深入探索主题的高级美化技巧从视觉设计到用户体验全方位打造一个独一无二的个人博客色彩主题深度定制创建专属色彩方案主题支持高度的色彩定制让我们创建一个温暖的奶茶色主题奶茶色主色调深色模式奶茶色按钮悬停颜色链接颜色浅色主题元标签颜色深色主题元标签颜色自定义变量在中定义更多色彩变量奶茶色系渐变色阴影效果页面布局优化首页轮播图美化创建更吸引人的首页轮播效果轮播配置淡入淡出效果卡片样式定制为文章卡片添加更精美的样式文章卡片美化添加光泽效果动画效果增强页面加载动画添加优雅的页面加载动画页面淡入动画错开动画时间导航栏动效为导航栏添加流畅的交互动画导航栏悬停效果背景与视觉效果动态背景设置创建引人注目的动态背景粒子效果背景添加粒子动画背景需要引入相关库在主题配置中添加响应式设计优化移动端适配确保在移动设备上的完美显示移动端优化平板端适配特殊功能定制自定义页脚创建个性化的页脚设计用心记录生活的美好时光侧边栏小组件美化侧边栏卡片美化标签云美化性能优化技巧图片懒加载代码压缩用户体验提升阅读进度条添加文章阅读进度指示阅读进度条返回顶部按钮美化主题色彩搭配建议温暖色系主色奶茶色辅色焦糖色背景米白色清新色系主色薄荷绿辅色海蓝色背景浅青色优雅色系主色紫罗兰辅色玫瑰金背景淡紫色总结与建议通过以上的深度定制你的主题博客将拥有独特的视觉风格流畅的动画效果完美的响应式体验优秀的用户交互出色的性能表现记住美化博客是一个渐进的过程建议循序渐进不要一次性添加太多效果保持一致确保整体风格协调统一注重性能美观的同时不要忽视加载速度用户优先始终以用户体验为核心定期更新根据反馈持续优化改进希望这份深度美化指南能帮助你打造出一个真正属于自己的独特博客如果你在实践过程中遇到任何问题欢迎在评论区交流讨论让我们一起用代码和创意为互联网增添更多美好',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-07-26 16:00:00',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#2F2F2F')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FAF0E6')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Mike_Tea" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/a177f5ab01ce971176adbbad341bf35.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Mike_Tea</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 生活</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 生活随笔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 互动</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AnZhiYu%E4%B8%BB%E9%A2%98/" style="font-size: 1.05rem;">AnZhiYu主题<sup>2</sup></a><a href="/tags/CSS%E5%AE%9A%E5%88%B6/" style="font-size: 1.05rem;">CSS定制<sup>1</sup></a><a href="/tags/Cloudflare-Pages/" style="font-size: 1.05rem;">Cloudflare Pages<sup>1</sup></a><a href="/tags/GitHub-Pages/" style="font-size: 1.05rem;">GitHub Pages<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>3</sup></a><a href="/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/" style="font-size: 1.05rem;">个性化定制<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" style="font-size: 1.05rem;">主题配置<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 1.05rem;">前端开发<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/" style="font-size: 1.05rem;">前端设计<sup>1</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 1.05rem;">博客搭建<sup>2</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">博客美化<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">技术教程<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">转载</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url">技术分享</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" itemprop="url">博客美化</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Hexo/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Hexo</span></a><a class="article-meta__tags" href="/tags/AnZhiYu%E4%B8%BB%E9%A2%98/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AnZhiYu主题</span></a><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>博客美化</span></a><a class="article-meta__tags" href="/tags/CSS%E5%AE%9A%E5%88%B6/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>CSS定制</span></a><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>前端设计</span></a><a class="article-meta__tags" href="/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>个性化定制</span></a></span></div></div><h1 class="post-title" itemprop="name headline">AnZhiYu主题深度美化指南 - 打造独一无二的个人博客</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-07-26T08:00:00.000Z" title="发表于 2025-07-26 16:00:00">2025-07-26</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-07-26T08:00:00.000Z" title="更新于 2025-07-26 16:00:00">2025-07-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">1.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="AnZhiYu主题深度美化指南 - 打造独一无二的个人博客"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span class="waline-pageview-count" data-path="/2025/07/26/anzhiyu-theme-advanced-customization/" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为南昌"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>南昌</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2025/07/26/anzhiyu-theme-advanced-customization/#post-comment"><span class="waline-comment-count" data-path="/2025/07/26/anzhiyu-theme-advanced-customization/"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E946B2AD0E7261BA41AC98B8ACC234D8.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div class="post-ai-description"><div class="ai-title"><i class="anzhiyufont anzhiyu-icon-bilibili"></i><div class="ai-title-text">AI-摘要</div><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i><i class="anzhiyufont anzhiyu-icon-circle-dot" title="朗读摘要"></i><div id="ai-tag">AnZhiYu GPT</div></div><div class="ai-explanation">AI初始化中...</div><div class="ai-btn-box"><div class="ai-btn-item">介绍自己 🙈</div><div class="ai-btn-item">生成本文简介 👋</div><div class="ai-btn-item">推荐相关文章 📖</div><div class="ai-btn-item">前往主页 🏠</div><div class="ai-btn-item" id="go-tianli-blog">前往爱发电购买</div></div><script data-pjax src="/js/anzhiyu/ai_abstract.js"></script></div><article class="post-content" id="article-container" itemscope itemtype="https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/"><header><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" itemprop="url">技术分享</a><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" itemprop="url">博客美化</a><a href="/tags/Hexo/" tabindex="-1" itemprop="url">Hexo</a><a href="/tags/AnZhiYu%E4%B8%BB%E9%A2%98/" tabindex="-1" itemprop="url">AnZhiYu主题</a><a href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" tabindex="-1" itemprop="url">博客美化</a><a href="/tags/CSS%E5%AE%9A%E5%88%B6/" tabindex="-1" itemprop="url">CSS定制</a><a href="/tags/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/" tabindex="-1" itemprop="url">前端设计</a><a href="/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/" tabindex="-1" itemprop="url">个性化定制</a><h1 id="CrawlerTitle" itemprop="name headline">AnZhiYu主题深度美化指南 - 打造独一无二的个人博客</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">奶茶味的香草</span><time itemprop="dateCreated datePublished" datetime="2025-07-26T08:00:00.000Z" title="发表于 2025-07-26 16:00:00">2025-07-26</time><time itemprop="dateCreated datePublished" datetime="2025-07-26T08:00:00.000Z" title="更新于 2025-07-26 16:00:00">2025-07-26</time></header><span id="more"></span>
+
+<p>在掌握了AnZhiYu主题的基础配置后，是时候让你的博客更上一层楼了！本文将带你深入探索AnZhiYu主题的高级美化技巧，从视觉设计到用户体验，全方位打造一个独一无二的个人博客。</p>
+<h2 id="🎨-1-色彩主题深度定制"><a href="#🎨-1-色彩主题深度定制" class="headerlink" title="🎨 1. 色彩主题深度定制"></a>🎨 1. 色彩主题深度定制</h2><h3 id="1-1-创建专属色彩方案"><a href="#1-1-创建专属色彩方案" class="headerlink" title="1.1 创建专属色彩方案"></a>1.1 创建专属色彩方案</h3><p>AnZhiYu主题支持高度的色彩定制。让我们创建一个温暖的”奶茶色”主题：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml</span></span><br><span class="line"><span class="attr">theme_color:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">main:</span> <span class="string">&quot;#D2B48C&quot;</span>                    <span class="comment"># 奶茶色主色调</span></span><br><span class="line">  <span class="attr">dark_main:</span> <span class="string">&quot;#8B7355&quot;</span>               <span class="comment"># 深色模式奶茶色</span></span><br><span class="line">  <span class="attr">button_hover:</span> <span class="string">&quot;#CD853F&quot;</span>            <span class="comment"># 按钮悬停颜色</span></span><br><span class="line">  <span class="attr">link_color:</span> <span class="string">&quot;#CD853F&quot;</span>              <span class="comment"># 链接颜色</span></span><br><span class="line">  <span class="attr">meta_theme_color_light:</span> <span class="string">&quot;#FAF0E6&quot;</span>  <span class="comment"># 浅色主题元标签颜色</span></span><br><span class="line">  <span class="attr">meta_theme_color_dark:</span> <span class="string">&quot;#2F2F2F&quot;</span>   <span class="comment"># 深色主题元标签颜色</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-自定义CSS变量"><a href="#1-2-自定义CSS变量" class="headerlink" title="1.2 自定义CSS变量"></a>1.2 自定义CSS变量</h3><p>在 <code>source/css/custom.css</code> 中定义更多色彩变量：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="comment">/* 奶茶色系 */</span></span><br><span class="line">  <span class="attr">--milk-tea-light</span>: <span class="number">#FAF0E6</span>;</span><br><span class="line">  <span class="attr">--milk-tea-main</span>: <span class="number">#D2B48C</span>;</span><br><span class="line">  <span class="attr">--milk-tea-dark</span>: <span class="number">#8B7355</span>;</span><br><span class="line">  <span class="attr">--milk-tea-accent</span>: <span class="number">#CD853F</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* 渐变色 */</span></span><br><span class="line">  <span class="attr">--gradient-warm</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="number">#FAF0E6</span> <span class="number">0%</span>, <span class="number">#D2B48C</span> <span class="number">100%</span>);</span><br><span class="line">  <span class="attr">--gradient-sunset</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="number">#FFE4B5</span> <span class="number">0%</span>, <span class="number">#DEB887</span> <span class="number">50%</span>, <span class="number">#CD853F</span> <span class="number">100%</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* 阴影效果 */</span></span><br><span class="line">  <span class="attr">--shadow-soft</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">20px</span> <span class="built_in">rgba</span>(<span class="number">210</span>, <span class="number">180</span>, <span class="number">140</span>, <span class="number">0.3</span>);</span><br><span class="line">  <span class="attr">--shadow-hover</span>: <span class="number">0</span> <span class="number">8px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">210</span>, <span class="number">180</span>, <span class="number">140</span>, <span class="number">0.4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🌟-2-页面布局优化"><a href="#🌟-2-页面布局优化" class="headerlink" title="🌟 2. 页面布局优化"></a>🌟 2. 页面布局优化</h2><h3 id="2-1-首页轮播图美化"><a href="#2-1-首页轮播图美化" class="headerlink" title="2.1 首页轮播图美化"></a>2.1 首页轮播图美化</h3><p>创建更吸引人的首页轮播效果：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml</span></span><br><span class="line"><span class="attr">index_img:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://your-cdn.com/banner1.jpg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://your-cdn.com/banner2.jpg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://your-cdn.com/banner3.jpg</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 轮播配置</span></span><br><span class="line"><span class="attr">swiper:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">effect:</span> <span class="string">&#x27;fade&#x27;</span>  <span class="comment"># 淡入淡出效果</span></span><br><span class="line">  <span class="attr">autoplay:</span> </span><br><span class="line">    <span class="attr">delay:</span> <span class="number">5000</span></span><br><span class="line">    <span class="attr">disableOnInteraction:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">loop:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-卡片样式定制"><a href="#2-2-卡片样式定制" class="headerlink" title="2.2 卡片样式定制"></a>2.2 卡片样式定制</h3><p>为文章卡片添加更精美的样式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 文章卡片美化 */</span></span><br><span class="line"><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--gradient-warm);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="built_in">var</span>(--shadow-soft);</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.3s</span> <span class="built_in">cubic-bezier</span>(<span class="number">0.4</span>, <span class="number">0</span>, <span class="number">0.2</span>, <span class="number">1</span>);</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.recent-post-item</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">8px</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="built_in">var</span>(--shadow-hover);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 添加光泽效果 */</span></span><br><span class="line"><span class="selector-class">.recent-post-item</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">90deg</span>, transparent, <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.2</span>), transparent);</span><br><span class="line">  <span class="attribute">transition</span>: left <span class="number">0.5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.recent-post-item</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎭-3-动画效果增强"><a href="#🎭-3-动画效果增强" class="headerlink" title="🎭 3. 动画效果增强"></a>🎭 3. 动画效果增强</h2><h3 id="3-1-页面加载动画"><a href="#3-1-页面加载动画" class="headerlink" title="3.1 页面加载动画"></a>3.1 页面加载动画</h3><p>添加优雅的页面加载动画：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 页面淡入动画 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> fadeInUp &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">30px</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: fadeInUp <span class="number">0.6s</span> ease-out;</span><br><span class="line">  <span class="attribute">animation-fill-mode</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 错开动画时间 */</span></span><br><span class="line"><span class="selector-class">.recent-post-item</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123; <span class="attribute">animation-delay</span>: <span class="number">0.1s</span>; &#125;</span><br><span class="line"><span class="selector-class">.recent-post-item</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123; <span class="attribute">animation-delay</span>: <span class="number">0.2s</span>; &#125;</span><br><span class="line"><span class="selector-class">.recent-post-item</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>) &#123; <span class="attribute">animation-delay</span>: <span class="number">0.3s</span>; &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-导航栏动效"><a href="#3-2-导航栏动效" class="headerlink" title="3.2 导航栏动效"></a>3.2 导航栏动效</h3><p>为导航栏添加流畅的交互动画：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 导航栏悬停效果 */</span></span><br><span class="line"><span class="selector-id">#nav</span> <span class="selector-class">.menus_item</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav</span> <span class="selector-class">.menus_item</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--milk-tea-accent);</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav</span> <span class="selector-class">.menus_item</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🖼️-4-背景与视觉效果"><a href="#🖼️-4-背景与视觉效果" class="headerlink" title="🖼️ 4. 背景与视觉效果"></a>🖼️ 4. 背景与视觉效果</h2><h3 id="4-1-动态背景设置"><a href="#4-1-动态背景设置" class="headerlink" title="4.1 动态背景设置"></a>4.1 动态背景设置</h3><p>创建引人注目的动态背景：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml</span></span><br><span class="line"><span class="attr">background:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://your-cdn.com/background.jpg</span></span><br><span class="line">  <span class="attr">opacity:</span> <span class="number">0.8</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-粒子效果背景"><a href="#4-2-粒子效果背景" class="headerlink" title="4.2 粒子效果背景"></a>4.2 粒子效果背景</h3><p>添加粒子动画背景（需要引入相关库）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 在主题配置中添加 --&gt;</span></span><br><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  bottom:</span><br><span class="line">    - |</span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;particles-js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">particlesJS</span>(<span class="string">&#x27;particles-js&#x27;</span>, &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">particles</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">number</span>: &#123; <span class="attr">value</span>: <span class="number">50</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">color</span>: &#123; <span class="attr">value</span>: <span class="string">&#x27;#D2B48C&#x27;</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">shape</span>: &#123; <span class="attr">type</span>: <span class="string">&#x27;circle&#x27;</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">opacity</span>: &#123; <span class="attr">value</span>: <span class="number">0.3</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">size</span>: &#123; <span class="attr">value</span>: <span class="number">3</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">move</span>: &#123; <span class="attr">enable</span>: <span class="literal">true</span>, <span class="attr">speed</span>: <span class="number">1</span> &#125;</span></span><br><span class="line"><span class="language-javascript">          &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">      </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="📱-5-响应式设计优化"><a href="#📱-5-响应式设计优化" class="headerlink" title="📱 5. 响应式设计优化"></a>📱 5. 响应式设计优化</h2><h3 id="5-1-移动端适配"><a href="#5-1-移动端适配" class="headerlink" title="5.1 移动端适配"></a>5.1 移动端适配</h3><p>确保在移动设备上的完美显示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 移动端优化 */</span></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">1rem</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">12px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-id">#nav</span> &#123;</span><br><span class="line">    <span class="attribute">backdrop-filter</span>: <span class="built_in">blur</span>(<span class="number">10px</span>);</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">250</span>, <span class="number">240</span>, <span class="number">230</span>, <span class="number">0.9</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-class">.card-widget</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">1rem</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">2px</span> <span class="number">12px</span> <span class="built_in">rgba</span>(<span class="number">210</span>, <span class="number">180</span>, <span class="number">140</span>, <span class="number">0.2</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-平板端适配"><a href="#5-2-平板端适配" class="headerlink" title="5.2 平板端适配"></a>5.2 平板端适配</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">min-width</span>: <span class="number">769px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">1024px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">50%</span> - <span class="number">0.5rem</span>);</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">vertical-align</span>: top;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎪-6-特殊功能定制"><a href="#🎪-6-特殊功能定制" class="headerlink" title="🎪 6. 特殊功能定制"></a>🎪 6. 特殊功能定制</h2><h3 id="6-1-自定义页脚"><a href="#6-1-自定义页脚" class="headerlink" title="6.1 自定义页脚"></a>6.1 自定义页脚</h3><p>创建个性化的页脚设计：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml</span></span><br><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="attr">owner:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">since:</span> <span class="number">2024</span></span><br><span class="line">  <span class="attr">custom_text:</span> <span class="string">|</span></span><br><span class="line"><span class="string">    &lt;div style=&quot;text-align: center; color: var(--milk-tea-dark);&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;p&gt;🍃 用心记录生活的美好时光 🍃&lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;p&gt;Made with ❤️ and lots of ☕&lt;/p&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-侧边栏小组件美化"><a href="#6-2-侧边栏小组件美化" class="headerlink" title="6.2 侧边栏小组件美化"></a>6.2 侧边栏小组件美化</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 侧边栏卡片美化 */</span></span><br><span class="line"><span class="selector-class">.card-widget</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--gradient-warm);</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="built_in">var</span>(--shadow-soft);</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.card-widget</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">2px</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="built_in">var</span>(--shadow-hover);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 标签云美化 */</span></span><br><span class="line"><span class="selector-class">.tag-cloud-list</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="built_in">var</span>(--milk-tea-light), <span class="built_in">var</span>(--milk-tea-main));</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--milk-tea-dark);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">4px</span> <span class="number">12px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">4px</span>;</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.tag-cloud-list</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--gradient-sunset);</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.05</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🔧-7-性能优化技巧"><a href="#🔧-7-性能优化技巧" class="headerlink" title="🔧 7. 性能优化技巧"></a>🔧 7. 性能优化技巧</h2><h3 id="7-1-图片懒加载"><a href="#7-1-图片懒加载" class="headerlink" title="7.1 图片懒加载"></a>7.1 图片懒加载</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml</span></span><br><span class="line"><span class="attr">lazyload:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">site</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">/img/loading.gif</span></span><br><span class="line">  <span class="attr">blur:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-代码压缩"><a href="#7-2-代码压缩" class="headerlink" title="7.2 代码压缩"></a>7.2 代码压缩</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml</span></span><br><span class="line"><span class="attr">minify:</span></span><br><span class="line">  <span class="attr">html:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">exclude:</span></span><br><span class="line">  <span class="attr">css:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">exclude:</span></span><br><span class="line">  <span class="attr">js:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="🎯-8-用户体验提升"><a href="#🎯-8-用户体验提升" class="headerlink" title="🎯 8. 用户体验提升"></a>🎯 8. 用户体验提升</h2><h3 id="8-1-阅读进度条"><a href="#8-1-阅读进度条" class="headerlink" title="8.1 阅读进度条"></a>8.1 阅读进度条</h3><p>添加文章阅读进度指示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 阅读进度条 */</span></span><br><span class="line"><span class="selector-class">.progress-bar</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--gradient-sunset);</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">9999</span>;</span><br><span class="line">  <span class="attribute">transition</span>: width <span class="number">0.3s</span> ease;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-返回顶部按钮美化"><a href="#8-2-返回顶部按钮美化" class="headerlink" title="8.2 返回顶部按钮美化"></a>8.2 返回顶部按钮美化</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#go-up</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--gradient-warm);</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="built_in">var</span>(--milk-tea-accent);</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--milk-tea-dark);</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#go-up</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--gradient-sunset);</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🎨-9-主题色彩搭配建议"><a href="#🎨-9-主题色彩搭配建议" class="headerlink" title="🎨 9. 主题色彩搭配建议"></a>🎨 9. 主题色彩搭配建议</h2><h3 id="9-1-温暖色系"><a href="#9-1-温暖色系" class="headerlink" title="9.1 温暖色系"></a>9.1 温暖色系</h3><ul>
+<li>主色：奶茶色 (#D2B48C)</li>
+<li>辅色：焦糖色 (#CD853F)</li>
+<li>背景：米白色 (#FAF0E6)</li>
+</ul>
+<h3 id="9-2-清新色系"><a href="#9-2-清新色系" class="headerlink" title="9.2 清新色系"></a>9.2 清新色系</h3><ul>
+<li>主色：薄荷绿 (#98FB98)</li>
+<li>辅色：海蓝色 (#87CEEB)</li>
+<li>背景：浅青色 (#F0FFFF)</li>
+</ul>
+<h3 id="9-3-优雅色系"><a href="#9-3-优雅色系" class="headerlink" title="9.3 优雅色系"></a>9.3 优雅色系</h3><ul>
+<li>主色：紫罗兰 (#9370DB)</li>
+<li>辅色：玫瑰金 (#E6B8A2)</li>
+<li>背景：淡紫色 (#F8F8FF)</li>
+</ul>
+<h2 id="📝-10-总结与建议"><a href="#📝-10-总结与建议" class="headerlink" title="📝 10. 总结与建议"></a>📝 10. 总结与建议</h2><p>通过以上的深度定制，你的AnZhiYu主题博客将拥有：</p>
+<ul>
+<li>✨ 独特的视觉风格</li>
+<li>🚀 流畅的动画效果</li>
+<li>📱 完美的响应式体验</li>
+<li>🎯 优秀的用户交互</li>
+<li>⚡ 出色的性能表现</li>
+</ul>
+<p>记住，美化博客是一个渐进的过程，建议：</p>
+<ol>
+<li><strong>循序渐进</strong>：不要一次性添加太多效果</li>
+<li><strong>保持一致</strong>：确保整体风格协调统一</li>
+<li><strong>注重性能</strong>：美观的同时不要忽视加载速度</li>
+<li><strong>用户优先</strong>：始终以用户体验为核心</li>
+<li><strong>定期更新</strong>：根据反馈持续优化改进</li>
+</ol>
+<p>希望这份深度美化指南能帮助你打造出一个真正属于自己的独特博客！如果你在实践过程中遇到任何问题，欢迎在评论区交流讨论。</p>
+<hr>
+<p><em>让我们一起用代码和创意，为互联网增添更多美好！</em> ✨</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/a177f5ab01ce971176adbbad341bf35.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/a177f5ab01ce971176adbbad341bf35.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">奶茶味的香草</div><div class="post-copyright__author_desc">分享生活中的小美好</div></div><div class="post-copyright__post__info"><a class="post-copyright__reprint" title="该文章为转载文章，注意版权协议" href="https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/">转载</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/')">AnZhiYu主题深度美化指南 - 打造独一无二的个人博客</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=AnZhiYu主题深度美化指南 - 打造独一无二的个人博客&amp;url=https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/&amp;pic=https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E946B2AD0E7261BA41AC98B8ACC234D8.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://meilunova.github.io" target="_blank">Mike_Tea</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Hexo/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Hexo<span class="tagsPageCount">3</span></a><a class="post-meta__box__tags" href="/tags/AnZhiYu%E4%B8%BB%E9%A2%98/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AnZhiYu主题<span class="tagsPageCount">2</span></a><a class="post-meta__box__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>博客美化<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/CSS%E5%AE%9A%E5%88%B6/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>CSS定制<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>前端设计<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>个性化定制<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E946B2AD0E7261BA41AC98B8ACC234D8.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2025/07/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E457C9CABAC56F731806EBE74B9CFEEF.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo博客搭建完整指南：从零开始打造你的个人博客</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/07/21/hexo-anzhiyu-theme-tutorial/" title="Hexo博客美化教程 - AnZhiYu主题配置"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/880D5513CE944E1AF6DDE7443D11666A.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-21</div><div class="title">Hexo博客美化教程 - AnZhiYu主题配置</div></div></a></div><div><a href="/2025/07/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Hexo博客搭建完整指南：从零开始打造你的个人博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E457C9CABAC56F731806EBE74B9CFEEF.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-21</div><div class="title">Hexo博客搭建完整指南：从零开始打造你的个人博客</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/a177f5ab01ce971176adbbad341bf35.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__name-section"><a class="author-info__name-link" href="/"><h1 class="author-info__name">奶茶味の香草</h1><div class="author-info__desc">分享生活中的小美好</div></a></div><div class="author-info__description">一个喜欢记录生活、分享技术的温馨小站</div><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/Meilunova" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/123705919" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="social-icon faa-parent animated-hover" href="mailto:3330876408@qq.com" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来看我的博客鸭~</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%A8-1-%E8%89%B2%E5%BD%A9%E4%B8%BB%E9%A2%98%E6%B7%B1%E5%BA%A6%E5%AE%9A%E5%88%B6"><span class="toc-number">1.</span> <span class="toc-text">🎨 1. 色彩主题深度定制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%88%9B%E5%BB%BA%E4%B8%93%E5%B1%9E%E8%89%B2%E5%BD%A9%E6%96%B9%E6%A1%88"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 创建专属色彩方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E8%87%AA%E5%AE%9A%E4%B9%89CSS%E5%8F%98%E9%87%8F"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 自定义CSS变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8C%9F-2-%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E4%BC%98%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">🌟 2. 页面布局优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E9%A6%96%E9%A1%B5%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%BE%8E%E5%8C%96"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 首页轮播图美化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8D%A1%E7%89%87%E6%A0%B7%E5%BC%8F%E5%AE%9A%E5%88%B6"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 卡片样式定制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%AD-3-%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C%E5%A2%9E%E5%BC%BA"><span class="toc-number">3.</span> <span class="toc-text">🎭 3. 动画效果增强</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 页面加载动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8A%A8%E6%95%88"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 导航栏动效</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%96%BC%EF%B8%8F-4-%E8%83%8C%E6%99%AF%E4%B8%8E%E8%A7%86%E8%A7%89%E6%95%88%E6%9E%9C"><span class="toc-number">4.</span> <span class="toc-text">🖼️ 4. 背景与视觉效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF%E8%AE%BE%E7%BD%AE"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 动态背景设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E7%B2%92%E5%AD%90%E6%95%88%E6%9E%9C%E8%83%8C%E6%99%AF"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 粒子效果背景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%B1-5-%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%8C%96"><span class="toc-number">5.</span> <span class="toc-text">📱 5. 响应式设计优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 移动端适配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%B9%B3%E6%9D%BF%E7%AB%AF%E9%80%82%E9%85%8D"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 平板端适配</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%AA-6-%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD%E5%AE%9A%E5%88%B6"><span class="toc-number">6.</span> <span class="toc-text">🎪 6. 特殊功能定制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E8%84%9A"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 自定义页脚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%B0%8F%E7%BB%84%E4%BB%B6%E7%BE%8E%E5%8C%96"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 侧边栏小组件美化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%A7-7-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7"><span class="toc-number">7.</span> <span class="toc-text">🔧 7. 性能优化技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 图片懒加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E4%BB%A3%E7%A0%81%E5%8E%8B%E7%BC%A9"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 代码压缩</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%AF-8-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E6%8F%90%E5%8D%87"><span class="toc-number">8.</span> <span class="toc-text">🎯 8. 用户体验提升</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 阅读进度条</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%E6%8C%89%E9%92%AE%E7%BE%8E%E5%8C%96"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 返回顶部按钮美化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%A8-9-%E4%B8%BB%E9%A2%98%E8%89%B2%E5%BD%A9%E6%90%AD%E9%85%8D%E5%BB%BA%E8%AE%AE"><span class="toc-number">9.</span> <span class="toc-text">🎨 9. 主题色彩搭配建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E6%B8%A9%E6%9A%96%E8%89%B2%E7%B3%BB"><span class="toc-number">9.1.</span> <span class="toc-text">9.1 温暖色系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E6%B8%85%E6%96%B0%E8%89%B2%E7%B3%BB"><span class="toc-number">9.2.</span> <span class="toc-text">9.2 清新色系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-%E4%BC%98%E9%9B%85%E8%89%B2%E7%B3%BB"><span class="toc-number">9.3.</span> <span class="toc-text">9.3 优雅色系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%9D-10-%E6%80%BB%E7%BB%93%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-number">10.</span> <span class="toc-text">📝 10. 总结与建议</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/26/anzhiyu-theme-advanced-customization/" title="AnZhiYu主题深度美化指南 - 打造独一无二的个人博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E946B2AD0E7261BA41AC98B8ACC234D8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AnZhiYu主题深度美化指南 - 打造独一无二的个人博客"/></a><div class="content"><a class="title" href="/2025/07/26/anzhiyu-theme-advanced-customization/" title="AnZhiYu主题深度美化指南 - 打造独一无二的个人博客">AnZhiYu主题深度美化指南 - 打造独一无二的个人博客</a><time datetime="2025-07-26T08:00:00.000Z" title="发表于 2025-07-26 16:00:00">2025-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Hexo博客搭建完整指南：从零开始打造你的个人博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/E457C9CABAC56F731806EBE74B9CFEEF.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo博客搭建完整指南：从零开始打造你的个人博客"/></a><div class="content"><a class="title" href="/2025/07/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Hexo博客搭建完整指南：从零开始打造你的个人博客">Hexo博客搭建完整指南：从零开始打造你的个人博客</a><time datetime="2025-07-21T10:06:21.000Z" title="发表于 2025-07-21 18:06:21">2025-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/21/hexo-anzhiyu-theme-tutorial/" title="Hexo博客美化教程 - AnZhiYu主题配置"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/880D5513CE944E1AF6DDE7443D11666A.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo博客美化教程 - AnZhiYu主题配置"/></a><div class="content"><a class="title" href="/2025/07/21/hexo-anzhiyu-theme-tutorial/" title="Hexo博客美化教程 - AnZhiYu主题配置">Hexo博客美化教程 - AnZhiYu主题配置</a><time datetime="2025-07-21T07:00:00.000Z" title="发表于 2025-07-21 15:00:00">2025-07-21</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:3330876408@qq.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://pub-56bf4aab86514a6684f7dc2b7b994a1f.r2.dev/a177f5ab01ce971176adbbad341bf35.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/Meilunova" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/123705919" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/badge/奶茶味的香草-写作灵感中.svg" alt="正在用心记录生活中的小美好~" title="正在用心记录生活中的小美好~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="奶茶味の香草" target="_blank">奶茶味の香草</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">4</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 生活</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 生活随笔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 互动</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AnZhiYu%E4%B8%BB%E9%A2%98/" style="font-size: 0.88rem;">AnZhiYu主题<sup>2</sup></a><a href="/tags/CSS%E5%AE%9A%E5%88%B6/" style="font-size: 0.88rem;">CSS定制<sup>1</sup></a><a href="/tags/Cloudflare-Pages/" style="font-size: 0.88rem;">Cloudflare Pages<sup>1</sup></a><a href="/tags/GitHub-Pages/" style="font-size: 0.88rem;">GitHub Pages<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>3</sup></a><a href="/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/" style="font-size: 0.88rem;">个性化定制<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" style="font-size: 0.88rem;">主题配置<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 0.88rem;">前端开发<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/" style="font-size: 0.88rem;">前端设计<sup>1</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 0.88rem;">博客搭建<sup>2</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">博客美化<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">技术教程<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="2829883282" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.5"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/playlist?id=2829883282&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("07/20/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 奶茶味の香草 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("07/20/2025 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "/img/badge/奶茶味的香草-享受生活中.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline-blog-vert.vercel.app',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: true,
+      imageUploader: true,
+    }, {"placeholder":"欢迎留言，让我们一起交流~","requiredMeta":["nick","mail"],"avatar":"mp","avatarCDN":"https://sdn.geekzu.org/avatar/"}))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    anzhiyu.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.cbd.int/@waline/client@3.1.3/dist/waline.css')
+      if (true) await getCSS('https://cdn.cbd.int/@waline/client@3.1.3/dist/waline-meta.css')
+      const { init } = await import('https://cdn.cbd.int/@waline/client@3.1.3/dist/waline.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://waline-blog-vert.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+    }
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
