@@ -6,46 +6,15 @@
   <link href="https://meilunova.github.io/atom.xml" rel="self"/>
   
   <link href="https://meilunova.github.io/"/>
-  <updated>2025-07-26T08:00:00.000Z</updated>
+  <updated>2025-07-21T10:06:21.000Z</updated>
   <id>https://meilunova.github.io/</id>
   
   <author>
-    <name>奶茶味の香草</name>
+    <name>奶茶味的香草</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>AnZhiYu主题深度美化指南 - 打造独一无二的个人博客</title>
-    <link href="https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/"/>
-    <id>https://meilunova.github.io/2025/07/26/anzhiyu-theme-advanced-customization/</id>
-    <published>2025-07-26T08:00:00.000Z</published>
-    <updated>2025-07-26T08:00:00.000Z</updated>
-    
-    
-    <summary type="html">深入探索AnZhiYu主题的高级美化技巧，从色彩搭配到动画效果，从布局优化到交互体验，全方位打造属于你的独特博客风格。</summary>
-    
-    
-    
-    <category term="技术分享" scheme="https://meilunova.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="博客美化" scheme="https://meilunova.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
-    
-    
-    <category term="Hexo" scheme="https://meilunova.github.io/tags/Hexo/"/>
-    
-    <category term="AnZhiYu主题" scheme="https://meilunova.github.io/tags/AnZhiYu%E4%B8%BB%E9%A2%98/"/>
-    
-    <category term="博客美化" scheme="https://meilunova.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
-    
-    <category term="CSS定制" scheme="https://meilunova.github.io/tags/CSS%E5%AE%9A%E5%88%B6/"/>
-    
-    <category term="前端设计" scheme="https://meilunova.github.io/tags/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="个性化定制" scheme="https://meilunova.github.io/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6/"/>
-    
-  </entry>
   
   <entry>
     <title>Hexo博客搭建完整指南：从零开始打造你的个人博客</title>
@@ -95,11 +64,42 @@
     
     <category term="博客搭建" scheme="https://meilunova.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
+    <category term="前端开发" scheme="https://meilunova.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
     <category term="AnZhiYu主题" scheme="https://meilunova.github.io/tags/AnZhiYu%E4%B8%BB%E9%A2%98/"/>
     
     <category term="主题配置" scheme="https://meilunova.github.io/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
     
+  </entry>
+  
+  <entry>
+    <title>我的博客美化之路 - AnZhiYu主题个性化改造实战</title>
+    <link href="https://meilunova.github.io/2025/01/20/anzhiyu-theme-advanced-customization/"/>
+    <id>https://meilunova.github.io/2025/01/20/anzhiyu-theme-advanced-customization/</id>
+    <published>2025-01-20T08:00:00.000Z</published>
+    <updated>2025-01-20T08:00:00.000Z</updated>
+    
+    
+    <summary type="html">分享我在美化AnZhiYu主题过程中的实践经验和心得体会，记录从零开始打造个性化博客的完整过程，希望能给同样热爱折腾的朋友一些启发。</summary>
+    
+    
+    
+    <category term="个人分享" scheme="https://meilunova.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="技术心得" scheme="https://meilunova.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%88%86%E4%BA%AB/%E6%8A%80%E6%9C%AF%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="博客搭建" scheme="https://meilunova.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
     <category term="前端开发" scheme="https://meilunova.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="CSS美化" scheme="https://meilunova.github.io/tags/CSS%E7%BE%8E%E5%8C%96/"/>
+    
+    <category term="个人经验" scheme="https://meilunova.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E9%AA%8C/"/>
+    
+    <category term="设计分享" scheme="https://meilunova.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="技术实践" scheme="https://meilunova.github.io/tags/%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5/"/>
     
   </entry>
   
