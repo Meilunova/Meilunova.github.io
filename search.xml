@@ -325,9 +325,9 @@
         <category>博客搭建</category>
       </categories>
       <tags>
+        <tag>前端开发</tag>
         <tag>Hexo</tag>
         <tag>博客搭建</tag>
-        <tag>前端开发</tag>
         <tag>AnZhiYu主题</tag>
         <tag>主题配置</tag>
       </tags>
@@ -806,8 +806,8 @@
         <category>技术心得</category>
       </categories>
       <tags>
-        <tag>博客搭建</tag>
         <tag>前端开发</tag>
+        <tag>博客搭建</tag>
         <tag>CSS美化</tag>
         <tag>个人经验</tag>
         <tag>设计分享</tag>
