@@ -13,26 +13,34 @@ class FavoritesApp {
     this.subcategoryList = null;
     this.currentFilter = 'all';
     this.currentSubcategory = 'all';
-    
+    // 支持首屏加载与 PJAX 二次进入
     this.init();
   }
   
   // 初始化应用
   init() {
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('收藏夹页面加载完成，开始初始化...');
-      
-      // 获取DOM元素
+    const onReady = () => {
+      console.log('收藏夹页面初始化..');
       this.initElements();
-      
       if (!this.favoritesContent) {
-        console.error('找不到 favorites-content 元素');
+        // 非收藏页，直接跳过
         return;
       }
-      
-      // 检查数据是否加载
+      // 防止重复初始化
+      if (this.favoritesContent.dataset.inited === 'true') return;
+      this.favoritesContent.dataset.inited = 'true';
       this.waitForData();
-    });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onReady);
+    } else {
+      // DOM 已就绪（包括 PJAX 回到本页的场景）
+      onReady();
+    }
+
+    // PJAX 完成后再次尝试初始化
+    document.addEventListener('pjax:complete', onReady);
   }
   
   // 初始化DOM元素
