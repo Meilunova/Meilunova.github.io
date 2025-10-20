@@ -1,120 +1,120 @@
-// ?????? - ??????  
+// 鸭科夫页面码 - 动物捏脸数据  
 window.yakovAnimalsData = [
   {
     id: "battle-chicken",
-    name: "???",
+    name: "战斗鸡",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/6c9f0e0eb7d02fc29d86806960a44e2a/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0.992,"g":0.847,"b":0.208,"a":1},"headScaleOffset":-0.4,"foreheadHeight":0.073,"foreheadRound":1},"hairID":3,"hairInfo":{"radius":0,"color":{"r":0.749,"g":0.212,"b":0.047,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":1,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.16,"heightOffset":0,"scale":1.517,"twist":0,"distanceAngle":39.979,"leftRightAngle":0},"eyebrowID":3,"eyebrowInfo":{"radius":0.23,"color":{"r":1,"g":0.627,"b":0,"a":1},"height":0.057,"heightOffset":0.16,"scale":2.767,"twist":-26.187,"distanceAngle":37.528,"leftRightAngle":0},"mouthID":1,"mouthInfo":{"radius":0.23,"color":{"r":0.902,"g":0.318,"b":0,"a":1},"height":0.088,"heightOffset":0,"scale":1.019,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.992,"g":0.847,"b":0.208,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":0.805,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.992,"g":0.847,"b":0.208,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "crow",
-    name: "??",
+    name: "乌鸦",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/98e9825eb2ea8bc0b5d510ba379149d3/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0,"g":0,"b":0,"a":1},"headScaleOffset":0.089,"foreheadHeight":0,"foreheadRound":1},"hairID":2,"hairInfo":{"radius":0,"color":{"r":0,"g":0,"b":0,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.054,"heightOffset":0,"scale":1.488,"twist":0,"distanceAngle":49.575,"leftRightAngle":0},"eyebrowID":1,"eyebrowInfo":{"radius":0.23,"color":{"r":0.976,"g":0.659,"b":0.145,"a":1},"height":0.062,"heightOffset":0.054,"scale":2.195,"twist":-18.836,"distanceAngle":47.648,"leftRightAngle":0},"mouthID":1,"mouthInfo":{"radius":0.23,"color":{"r":0.976,"g":0.659,"b":0.145,"a":1},"height":-0.045,"heightOffset":0,"scale":2.192,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.976,"g":0.659,"b":0.145,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.24,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0,"g":0,"b":0,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "white-goose",
-    name: "???",
+    name: "大白鹅",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/5cf4dffa7eeabf9aff9ecaf211dbba55/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":0.209,"foreheadHeight":0,"foreheadRound":1},"hairID":2,"hairInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.024,"heightOffset":0,"scale":1.57,"twist":0,"distanceAngle":37.817,"leftRightAngle":0},"eyebrowID":1,"eyebrowInfo":{"radius":0.23,"color":{"r":0.933,"g":0.933,"b":0.933,"a":1},"height":0.08,"heightOffset":0.024,"scale":1.274,"twist":-26.187,"distanceAngle":20.23,"leftRightAngle":0},"mouthID":2,"mouthInfo":{"radius":0.23,"color":{"r":0.804,"g":0.863,"b":0.224,"a":1},"height":-0.059,"heightOffset":0,"scale":1.232,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.24,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "eagle",
-    name: "??",
+    name: "老鹰",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/cfd894e26bf1fc409c4c703d3e863fd4/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0.62,"g":0.62,"b":0.62,"a":1},"headScaleOffset":0.113,"foreheadHeight":0.021,"foreheadRound":1},"hairID":2,"hairInfo":{"radius":0,"color":{"r":0.933,"g":0.933,"b":0.933,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.088,"heightOffset":0,"scale":1.57,"twist":0,"distanceAngle":31.33,"leftRightAngle":0},"eyebrowID":3,"eyebrowInfo":{"radius":0.23,"color":{"r":0.933,"g":0.933,"b":0.933,"a":1},"height":0.037,"heightOffset":0.088,"scale":2.75,"twist":-26.187,"distanceAngle":24.122,"leftRightAngle":0},"mouthID":1,"mouthInfo":{"radius":0.23,"color":{"r":0.902,"g":0.933,"b":0.612,"a":1},"height":0.01,"heightOffset":0,"scale":1.179,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.631,"g":0.533,"b":0.498,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.064,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.631,"g":0.533,"b":0.498,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "owl",
-    name: "???",
+    name: "猫头鹰",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/569c4cbc66b1086bb9f8eddd1f79eaba/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0.475,"g":0.333,"b":0.282,"a":1},"headScaleOffset":0.336,"foreheadHeight":0,"foreheadRound":1},"hairID":4,"hairInfo":{"radius":0,"color":{"r":0.475,"g":0.333,"b":0.282,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.021,"heightOffset":0,"scale":1.659,"twist":0,"distanceAngle":32.195,"leftRightAngle":0},"eyebrowID":3,"eyebrowInfo":{"radius":0.23,"color":{"r":0.933,"g":0.933,"b":0.933,"a":1},"height":0.074,"heightOffset":0.021,"scale":2.358,"twist":-20.998,"distanceAngle":31.041,"leftRightAngle":0},"mouthID":1,"mouthInfo":{"radius":0.23,"color":{"r":1,"g":0.561,"b":0,"a":1},"height":-0.025,"heightOffset":0,"scale":0.592,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.475,"g":0.333,"b":0.282,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.088,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.475,"g":0.333,"b":0.282,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "parrot",
-    name: "??",
+    name: "鹦鹉",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/17/8f673c30e912946addff91b0cb1dd1dd/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":0.14,"foreheadHeight":0.131,"foreheadRound":1},"hairID":3,"hairInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":1,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.197,"heightOffset":0,"scale":1.019,"twist":0,"distanceAngle":37.817,"leftRightAngle":0},"eyebrowID":1,"eyebrowInfo":{"radius":0.23,"color":{"r":1,"g":0.878,"b":0.51,"a":1},"height":-0.092,"heightOffset":0.197,"scale":2.009,"twist":-4.564,"distanceAngle":58.286,"leftRightAngle":0},"mouthID":3,"mouthInfo":{"radius":0.23,"color":{"r":1,"g":0.671,"b":0.569,"a":1},"height":0.128,"heightOffset":0,"scale":1.197,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.24,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "vulture",
-    name: "??",
+    name: "秃鹫",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/a785d147d430fe50872e2870eb9c9364/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":0.671,"b":0.569,"a":1},"headScaleOffset":-0.4,"foreheadHeight":0.264,"foreheadRound":1},"hairID":7,"hairInfo":{"radius":0,"color":{"r":1,"g":0.671,"b":0.569,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.3,"heightOffset":0,"scale":1.414,"twist":0,"distanceAngle":36.952,"leftRightAngle":0},"eyebrowID":1,"eyebrowInfo":{"radius":0.23,"color":{"r":1,"g":0.671,"b":0.569,"a":1},"height":0.033,"heightOffset":0.3,"scale":2.358,"twist":11.004,"distanceAngle":40.642,"leftRightAngle":0},"mouthID":1,"mouthInfo":{"radius":0.23,"color":{"r":0.737,"g":0.667,"b":0.643,"a":1},"height":0.209,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.475,"g":0.333,"b":0.282,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.124,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.475,"g":0.333,"b":0.282,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "white-chicken",
-    name: "???",
+    name: "白羽鸡",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/d7909af05ecd45fef2e931e14beb3faa/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":-0.164,"foreheadHeight":0.053,"foreheadRound":1},"hairID":3,"hairInfo":{"radius":0,"color":{"r":0.953,"g":0.424,"b":0.376,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":1,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.137,"heightOffset":0,"scale":1.2,"twist":0,"distanceAngle":41.103,"leftRightAngle":0},"eyebrowID":1,"eyebrowInfo":{"radius":0.23,"color":{"r":0.933,"g":0.933,"b":0.933,"a":1},"height":0.044,"heightOffset":0.137,"scale":1.16,"twist":-26.36,"distanceAngle":37.528,"leftRightAngle":0},"mouthID":3,"mouthInfo":{"radius":0.23,"color":{"r":0.953,"g":0.424,"b":0.376,"a":1},"height":0.067,"heightOffset":0,"scale":1.2,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1.302,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.24,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "silly-pigeon",
-    name: "???",
+    name: "傻咕咕",
     image: "https://imgheybox.max-c.com/bbs/2025/10/17/c83a1ffbb24c495f5a5e7ab226530e5d/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0.737,"g":0.667,"b":0.643,"a":1},"headScaleOffset":-0.283,"foreheadHeight":0.197,"foreheadRound":1},"hairID":0,"hairInfo":{"radius":0,"color":{"r":0.953,"g":0.424,"b":0.376,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":3,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.272,"heightOffset":0,"scale":1.072,"twist":0,"distanceAngle":36.519,"leftRightAngle":0},"eyebrowID":1,"eyebrowInfo":{"radius":0.23,"color":{"r":0.631,"g":0.533,"b":0.498,"a":1},"height":0.034,"heightOffset":0.272,"scale":1.541,"twist":-4.564,"distanceAngle":37.096,"leftRightAngle":0},"mouthID":1,"mouthInfo":{"radius":0.23,"color":{"r":0.271,"g":0.353,"b":0.392,"a":1},"height":0.263,"heightOffset":0,"scale":0.735,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.631,"g":0.533,"b":0.498,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.079,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.631,"g":0.533,"b":0.498,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "pelican",
-    name: "??",
+    name: "鹈鹕",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/17/9687a495b30dac1325558d7ff0578b36/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":-0.271,"foreheadHeight":0.284,"foreheadRound":1},"hairID":2,"hairInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":3,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.3,"heightOffset":0,"scale":1.126,"twist":0,"distanceAngle":52.52,"leftRightAngle":0},"eyebrowID":8,"eyebrowInfo":{"radius":0.23,"color":{"r":1,"g":1,"b":1,"a":1},"height":0.022,"heightOffset":0.3,"scale":1.789,"twist":8.409,"distanceAngle":50.935,"leftRightAngle":0},"mouthID":25,"mouthInfo":{"radius":0.23,"color":{"r":0.902,"g":0.933,"b":0.612,"a":1},"height":0.108,"heightOffset":0,"scale":1.819,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.475,"g":0.333,"b":0.282,"a":1},"height":0,"heightOffset":0,"scale":1.545,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.007,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.933,"g":0.933,"b":0.933,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "toucan",
-    name: "???",
+    name: "大嘴鸟",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/17/594eccd408abfc753771532b0dd06382/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0,"g":0,"b":0,"a":1},"headScaleOffset":0.182,"foreheadHeight":0.264,"foreheadRound":1},"hairID":7,"hairInfo":{"radius":0,"color":{"r":0.749,"g":0.212,"b":0.047,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.3,"heightOffset":0,"scale":1.126,"twist":0,"distanceAngle":51.223,"leftRightAngle":0},"eyebrowID":1,"eyebrowInfo":{"radius":0.23,"color":{"r":1,"g":0.627,"b":0,"a":1},"height":-0.125,"heightOffset":0.3,"scale":1.789,"twist":0.625,"distanceAngle":63.908,"leftRightAngle":0},"mouthID":23,"mouthInfo":{"radius":0.23,"color":{"r":0.984,"g":0.753,"b":0.176,"a":1},"height":0.289,"heightOffset":0,"scale":1.517,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.475,"g":0.333,"b":0.282,"a":1},"height":0,"heightOffset":0,"scale":1.545,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.016,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.749,"g":0.212,"b":0.047,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "penguin",
-    name: "??",
+    name: "企鹅",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/18/eb2f2c2e9b684114b7e5edc53da5492f/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":-0.307,"foreheadHeight":0,"foreheadRound":1},"hairID":11,"hairInfo":{"radius":0,"color":{"r":0,"g":0,"b":0,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.185,"heightOffset":0,"scale":1.061,"twist":0,"distanceAngle":46.754,"leftRightAngle":0},"eyebrowID":7,"eyebrowInfo":{"radius":0.23,"color":{"r":0.984,"g":0.753,"b":0.176,"a":1},"height":-0.077,"heightOffset":0.185,"scale":4,"twist":-64.532,"distanceAngle":89.423,"leftRightAngle":0},"mouthID":27,"mouthInfo":{"radius":0.23,"color":{"r":0.984,"g":0.753,"b":0.176,"a":1},"height":0.25,"heightOffset":0,"scale":1.274,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":1,"tailInfo":{"radius":0,"color":{"r":0,"g":0,"b":0,"a":1},"height":0,"heightOffset":0,"scale":0.813,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.007,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0,"g":0,"b":0,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "seagull",
-    name: "??",
+    name: "海鸥",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/19/c4998ae9e001035b385d892eb80ec364/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":-0.333,"foreheadHeight":0.208,"foreheadRound":1},"hairID":0,"hairInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":1,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.3,"heightOffset":0,"scale":1.168,"twist":0,"distanceAngle":70.251,"leftRightAngle":0},"eyebrowID":6,"eyebrowInfo":{"radius":0.23,"color":{"r":1,"g":0.922,"b":0.231,"a":1},"height":0.037,"heightOffset":0.3,"scale":2.483,"twist":-2.489,"distanceAngle":67.8,"leftRightAngle":0},"mouthID":27,"mouthInfo":{"radius":0.23,"color":{"r":0.271,"g":0.353,"b":0.392,"a":1},"height":0.3,"heightOffset":0,"scale":1.616,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0,"g":0,"b":0,"a":1},"height":0,"heightOffset":0,"scale":1.699,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.079,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.741,"g":0.741,"b":0.741,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "small-parrot",
-    name: "???",
+    name: "小鹦鹉",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/18/a0c9e3701f96270f1d16132f635c8de9/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":-0.229,"foreheadHeight":0.137,"foreheadRound":1},"hairID":0,"hairInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.229,"heightOffset":0,"scale":0.912,"twist":0,"distanceAngle":49.061,"leftRightAngle":0},"eyebrowID":4,"eyebrowInfo":{"radius":0.23,"color":{"r":0.741,"g":0.741,"b":0.741,"a":1},"height":0.011,"heightOffset":0.229,"scale":1.861,"twist":-17.538,"distanceAngle":48.88,"leftRightAngle":0},"mouthID":3,"mouthInfo":{"radius":0.23,"color":{"r":0.502,"g":0.871,"b":0.918,"a":1},"height":0.22,"heightOffset":0,"scale":1.179,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.878,"g":0.878,"b":0.878,"a":1},"height":0,"heightOffset":0,"scale":1.17,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.088,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.878,"g":0.878,"b":0.878,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "blue-bird",
-    name: "???",
+    name: "小蓝鸟",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/19/68a95ecd54044bf2163dd0f4a539feff/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0.012,"g":0.663,"b":0.957,"a":1},"headScaleOffset":-0.183,"foreheadHeight":0,"foreheadRound":1},"hairID":2,"hairInfo":{"radius":0,"color":{"r":0.012,"g":0.663,"b":0.957,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.102,"heightOffset":0,"scale":0.912,"twist":0,"distanceAngle":38.682,"leftRightAngle":0},"eyebrowID":3,"eyebrowInfo":{"radius":0.23,"color":{"r":0.506,"g":0.831,"b":0.98,"a":1},"height":0.037,"heightOffset":0.102,"scale":1.861,"twist":-17.538,"distanceAngle":37.528,"leftRightAngle":0},"mouthID":27,"mouthInfo":{"radius":0.23,"color":{"r":0.471,"g":0.565,"b":0.612,"a":1},"height":0.131,"heightOffset":0,"scale":1.215,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.165,"g":0.212,"b":0.694,"a":1},"height":0,"heightOffset":0,"scale":1.17,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.088,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":0.451,"g":0.561,"b":0.996,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "white-brow",
-    name: "??",
+    name: "白眉",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/19/688156eca21da597c1830dc68cfc37c2/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":0.149,"g":0.196,"b":0.22,"a":1},"headScaleOffset":-0.252,"foreheadHeight":0.186,"foreheadRound":1},"hairID":4,"hairInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0,"g":0,"b":0,"a":1},"height":0.3,"heightOffset":0,"scale":0.966,"twist":0,"distanceAngle":44.303,"leftRightAngle":0},"eyebrowID":6,"eyebrowInfo":{"radius":0.23,"color":{"r":1,"g":1,"b":1,"a":1},"height":0.123,"heightOffset":0.3,"scale":3.461,"twist":-7.159,"distanceAngle":76.017,"leftRightAngle":0},"mouthID":27,"mouthInfo":{"radius":0.23,"color":{"r":0.376,"g":0.49,"b":0.545,"a":1},"height":0.272,"heightOffset":0,"scale":2.05,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":0.216,"g":0.278,"b":0.31,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.088,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'
   },
   {
     id: "dumpling-bird",
-    name: "???",
+    name: "团子鸟",
     image: "https://imgheybox.max-c.com/web/bbs/2025/10/19/d466ef99925d692015f786b127c108fb/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
     sourceUrl: SOURCE_URL,
     code: '{"savedSetting":false,"headSetting":{"mainColor":{"r":1,"g":1,"b":1,"a":1},"headScaleOffset":0.128,"foreheadHeight":0,"foreheadRound":1},"hairID":2,"hairInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1,"twist":0,"distanceAngle":0,"leftRightAngle":0},"eyeID":6,"eyeInfo":{"radius":0.23,"color":{"r":0.216,"g":0.278,"b":0.31,"a":1},"height":0.085,"heightOffset":0,"scale":1.055,"twist":0,"distanceAngle":49.493,"leftRightAngle":0},"eyebrowID":2,"eyebrowInfo":{"radius":0.23,"color":{"r":0.471,"g":0.565,"b":0.612,"a":1},"height":0.045,"heightOffset":0.085,"scale":1.523,"twist":-17.538,"distanceAngle":48.772,"leftRightAngle":0},"mouthID":2,"mouthInfo":{"radius":0.23,"color":{"r":0.271,"g":0.353,"b":0.392,"a":1},"height":0.067,"heightOffset":0,"scale":1.037,"twist":0,"distanceAngle":0,"leftRightAngle":0},"tailID":3,"tailInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":1.349,"twist":0,"distanceAngle":0,"leftRightAngle":0},"footID":0,"footInfo":{"radius":0,"color":{"r":1,"g":0.403,"b":0.203,"a":1},"height":0,"heightOffset":0,"scale":1.064,"twist":0,"distanceAngle":0,"leftRightAngle":0},"wingID":0,"wingInfo":{"radius":0,"color":{"r":1,"g":1,"b":1,"a":1},"height":0,"heightOffset":0,"scale":2,"twist":0,"distanceAngle":0,"leftRightAngle":0}}'

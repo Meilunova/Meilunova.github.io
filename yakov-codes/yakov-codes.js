@@ -7,11 +7,6 @@
     let searchQuery = '';
     let allAnimalsData = [];
 
-    // Like storage
-    const LIKES_STORAGE_KEY = 'yakovLikes.v1';
-    const LIKED_SET_KEY = 'yakovLikedSet.v1';
-    let likesMap = {};
-    let likedSet = new Set();
 
     // DOM elements (will be initialized after DOM ready)
     let searchInput;
@@ -43,7 +38,6 @@
             return;
         }
 
-        loadLikesFromStorage();
         generateAllAnimalsData();
         renderMainFilters();
         renderAnimalCards();
@@ -55,8 +49,7 @@
         allAnimalsData = window.yakovAnimalsData.map(animal => ({
             ...animal,
             category: '全部动物',
-            tags: getAnimalTags(animal.name),
-            likes: Number(likesMap[animal.id] || 0)
+            tags: getAnimalTags(animal.name)
         }));
     }
 
@@ -159,7 +152,7 @@
 
         // 更新右侧统计
         renderStatsCard(filteredAnimals);
-        renderHotCard();
+
     }
 
     // Create a single animal card HTML
@@ -168,7 +161,6 @@
             `<span class="animal-tag">${tag}</span>`
         ).join('');
 
-        const liked = likedSet.has(animal.id);
         return `
             <div class="animal-card" data-animal-id="${animal.id}">
                 <img src="${animal.image}" alt="${animal.name}" class="animal-cover" loading="lazy">
@@ -187,9 +179,6 @@
                     <div class="detail-item">
                         <button class="copy-btn" data-code="${escapeHtml(animal.code)}" title="复制代码">
                             <i class="fas fa-copy"></i> 复制代码
-                        </button>
-                        <button class="like-btn ${liked ? 'liked' : ''}" title="${liked ? '已点赞，点击取消' : '点赞此卡'}">
-                            ❤ <span class="like-count">${Number(animal.likes || 0)}</span>
                         </button>
                         ${animal.sourceUrl ? `
                         <button class="source-btn" onclick="window.open('${animal.sourceUrl}', '_blank')" title="查看原文">
@@ -235,41 +224,7 @@
             });
         });
 
-        // Like buttons
-        document.querySelectorAll('.like-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const card = btn.closest('.animal-card');
-                if (!card) return;
-                const id = card.getAttribute('data-animal-id');
 
-                let current = Number(likesMap[id] || 0);
-                if (likedSet.has(id)) {
-                    // 取消点赞
-                    current = Math.max(0, current - 1);
-                    likesMap[id] = current;
-                    likedSet.delete(id);
-                    btn.classList.remove('liked');
-                    btn.title = '点赞此卡';
-                } else {
-                    // 点赞
-                    current = current + 1;
-                    likesMap[id] = current;
-                    likedSet.add(id);
-                    btn.classList.add('liked');
-                    btn.title = '已点赞，点击取消';
-                }
-
-                saveLikesToStorage();
-
-                const cnt = btn.querySelector('.like-count');
-                if (cnt) cnt.textContent = String(current);
-
-                const found = allAnimalsData.find(a => a.id === id);
-                if (found) found.likes = current;
-
-                renderHotCard();
-            });
-        });
     }
 
     // Copy to clipboard
@@ -321,21 +276,7 @@
         }, 2000);
     }
 
-    // Likes storage helpers
-    function loadLikesFromStorage() {
-        try {
-            likesMap = JSON.parse(localStorage.getItem(LIKES_STORAGE_KEY) || '{}');
-        } catch { likesMap = {}; }
-        try {
-            const arr = JSON.parse(localStorage.getItem(LIKED_SET_KEY) || '[]');
-            likedSet = new Set(Array.isArray(arr) ? arr : []);
-        } catch { likedSet = new Set(); }
-    }
 
-    function saveLikesToStorage() {
-        localStorage.setItem(LIKES_STORAGE_KEY, JSON.stringify(likesMap));
-        localStorage.setItem(LIKED_SET_KEY, JSON.stringify(Array.from(likedSet)));
-    }
 
     // Bind events
     function bindEvents() {
@@ -420,33 +361,7 @@
         `;
     }
 
-    // 渲染热门排行榜（按点赞）
-    function renderHotCard() {
-        const hotEl = document.getElementById('yakov-hot-card');
-        if (!hotEl) return;
 
-        const ranked = allAnimalsData
-            .map(a => ({ id: a.id, name: a.name, likes: Number(likesMap[a.id] || 0) }))
-            .sort((a, b) => b.likes - a.likes)
-            .slice(0, 6);
-
-        const items = ranked.map((r, idx) => `
-            <li data-id="${r.id}"><span>${idx + 1}. ${r.name}</span><span>❤ ${r.likes}</span></li>
-        `).join('');
-
-        hotEl.innerHTML = `
-            <h4>🔥 热门排行</h4>
-            <ul class="stats-list hot-list">${items}</ul>
-        `;
-
-        hotEl.querySelectorAll('li').forEach(li => {
-            li.addEventListener('click', () => {
-                const id = li.getAttribute('data-id');
-                const card = document.querySelector(`.animal-card[data-animal-id="${id}"]`);
-                if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            });
-        });
-    }
 
     // Debounce function
     function debounce(func, wait) {
