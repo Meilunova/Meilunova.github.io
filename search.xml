@@ -485,11 +485,22 @@
   <entry>
     <title>Hexo博客搭建完整指南：从零开始打造你的个人博客</title>
     <url>/2025/07/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<div class="note info modern flat"><p>💡 <strong>写在前面</strong><br>大家好，我是奶茶味的香草！今天为大家带来一篇超详细的 Hexo 博客搭建教程。作为一个热爱分享的技术爱好者，我希望通过这篇文章帮助更多朋友拥有属于自己的个人博客。这个教程完全免费，不需要购买服务器，跟着我一步步来，你也能拥有一个漂亮的个人网站！</p>
+    <content><![CDATA[<div class=" note note-info info modern flat">
+<p>💡 <strong>写在前面</strong><br>大家好，我是奶茶味的香草！今天为大家带来一篇超详细的 Hexo 博客搭建教程。作为一个热爱分享的技术爱好者，我希望通过这篇文章帮助更多朋友拥有属于自己的个人博客。这个教程完全免费，不需要购买服务器，跟着我一步步来，你也能拥有一个漂亮的个人网站！</p>
+
 </div>
 
 <h2 id="🌟-什么是-Hexo？"><a href="#🌟-什么是-Hexo？" class="headerlink" title="🌟 什么是 Hexo？"></a>🌟 什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架，基于 Node.js 开发。它使用 Markdown 语法来编写文章，能够快速生成静态网页，并且可以轻松部署到 GitHub Pages、Cloudflare Pages 等免费平台。</p>
-<div class="tabs" id="hexo-features"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="hexo-features-1">🚀 快速生成</button><button type="button" class="tab " data-href="hexo-features-2">📝 Markdown 支持</button><button type="button" class="tab " data-href="hexo-features-3">🎨 丰富主题</button><button type="button" class="tab " data-href="hexo-features-4">🔌 插件丰富</button></ul><div class="tab-contents"><div class="tab-item-content active" id="hexo-features-1"><p>Hexo 拥有超快的生成速度，数百个页面在几秒内瞬间完成渲染</p></div><div class="tab-item-content" id="hexo-features-2"><p>支持 GitHub Flavored Markdown 的所有功能，甚至可以使用大多数的 Octopress 插件</p></div><div class="tab-item-content" id="hexo-features-3"><p>拥有强大的主题系统，一键切换主题，轻松定制外观</p></div><div class="tab-item-content" id="hexo-features-4"><p>强大的插件系统，支持 Jade、CoffeeScript 等多种模板引擎</p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
+<div class="tabs">
+<section class="tab-section"><h3 class="tab-title">🚀 快速生成</h3><div class="tab-content"><p>Hexo 拥有超快的生成速度，数百个页面在几秒内瞬间完成渲染</p>
+</div></section>
+<section class="tab-section"><h3 class="tab-title">📝 Markdown 支持</h3><div class="tab-content"><p>支持 GitHub Flavored Markdown 的所有功能，甚至可以使用大多数的 Octopress 插件</p>
+</div></section>
+<section class="tab-section"><h3 class="tab-title">🎨 丰富主题</h3><div class="tab-content"><p>拥有强大的主题系统，一键切换主题，轻松定制外观</p>
+</div></section>
+<section class="tab-section"><h3 class="tab-title">🔌 插件丰富</h3><div class="tab-content"><p>强大的插件系统，支持 Jade、CoffeeScript 等多种模板引擎</p>
+</div></section>
+</div>
 
 <h2 id="📋-事前准备"><a href="#📋-事前准备" class="headerlink" title="📋 事前准备"></a>📋 事前准备</h2><p>在开始搭建博客前，我们需要准备以下几项：</p>
 <ul>
@@ -498,17 +509,21 @@
 <li>⭕ Cloudflare 账号（非必须，可以用于 CDN 加速，也可以直接使用 GitHub.io 分配的域名）</li>
 </ul>
 <h2 id="💻-软件支持"><a href="#💻-软件支持" class="headerlink" title="💻 软件支持"></a>💻 软件支持</h2><p>进行 Hexo 博客搭建，我们需要以下软件：</p>
-<div class="note success flat"><p><strong>必须安装的软件</strong></p>
+<div class=" note note-success success flat">
+<p><strong>必须安装的软件</strong></p>
 <ul>
 <li>Node.js（JavaScript 运行环境）</li>
 <li>Git（版本控制工具）</li>
 </ul>
+
 </div>
 
-<div class="note info flat"><p><strong>推荐安装的软件</strong></p>
+<div class=" note note-info info flat">
+<p><strong>推荐安装的软件</strong></p>
 <ul>
 <li>VSCode（轻量型代码编辑器，有助于养成良好编程习惯）</li>
 </ul>
+
 </div>
 
 <h3 id="🟢-安装-Node-js"><a href="#🟢-安装-Node-js" class="headerlink" title="🟢 安装 Node.js"></a>🟢 安装 Node.js</h3><ol>
@@ -559,7 +574,9 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
 
 <p>则表示 SSH 连接验证成功！</p>
-<h3 id="📁-创建-GitHub-io-仓库"><a href="#📁-创建-GitHub-io-仓库" class="headerlink" title="📁 创建 GitHub.io 仓库"></a>📁 创建 GitHub.io 仓库</h3><div class="note warning flat"><p><strong>重要提醒</strong><br>仓库名称必须严格按照 <code>用户名.github.io</code> 的格式，否则无法正常访问！</p>
+<h3 id="📁-创建-GitHub-io-仓库"><a href="#📁-创建-GitHub-io-仓库" class="headerlink" title="📁 创建 GitHub.io 仓库"></a>📁 创建 GitHub.io 仓库</h3><div class=" note note-warning warning flat">
+<p><strong>重要提醒</strong><br>仓库名称必须严格按照 <code>用户名.github.io</code> 的格式，否则无法正常访问！</p>
+
 </div>
 
 <ol>
@@ -587,21 +604,27 @@
 </ol>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:你的用户名/你的用户名.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
 
-<div class="note warning flat"><p><strong>注意</strong>：根据 GitHub 的最新政策，新创建的仓库默认分支名可能是 <code>main</code> 而不是 <code>master</code>。请确认你的 GitHub 仓库默认分支名称，并相应地设置 <code>branch</code> 值。</p>
+<div class=" note note-warning warning flat">
+<p><strong>注意</strong>：根据 GitHub 的最新政策，新创建的仓库默认分支名可能是 <code>main</code> 而不是 <code>master</code>。请确认你的 GitHub 仓库默认分支名称，并相应地设置 <code>branch</code> 值。</p>
+
 </div>
 
 <h3 id="👀-本地预览博客"><a href="#👀-本地预览博客" class="headerlink" title="👀 本地预览博客"></a>👀 本地预览博客</h3><p>在博客根目录下执行以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo generate</span><br><span class="line"><span class="comment"># 或简写为</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动本地服务器</span></span><br><span class="line">hexo server</span><br><span class="line"><span class="comment"># 或简写为</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>然后在浏览器访问 <code>http://localhost:4000</code> 查看效果！</p>
-<div class="note success flat"><p>🎉 <strong>恭喜！</strong> 如果你能看到 Hexo 的默认页面，说明博客已经成功搭建了！</p>
+<div class=" note note-success success flat">
+<p>🎉 <strong>恭喜！</strong> 如果你能看到 Hexo 的默认页面，说明博客已经成功搭建了！</p>
+
 </div>
 
 <h2 id="🌐-部署到-GitHub-Pages"><a href="#🌐-部署到-GitHub-Pages" class="headerlink" title="🌐 部署到 GitHub Pages"></a>🌐 部署到 GitHub Pages</h2><h3 id="📤-部署博客"><a href="#📤-部署博客" class="headerlink" title="📤 部署博客"></a>📤 部署博客</h3><p>在博客根目录下执行以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 清理缓存</span></span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署到 GitHub</span></span><br><span class="line">hexo deploy</span><br><span class="line"><span class="comment"># 或简写为</span></span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以一键生成并部署</span></span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 
 <h3 id="🎯-访问你的博客"><a href="#🎯-访问你的博客" class="headerlink" title="🎯 访问你的博客"></a>🎯 访问你的博客</h3><p>部署完成后，等待几分钟，然后访问 <code>https://你的用户名.github.io</code> 查看你的博客！</p>
-<div class="note info flat"><p>💡 <strong>小贴士</strong>：首次部署可能需要等待 5-10 分钟才能访问，这是正常现象。</p>
+<div class=" note note-info info flat">
+<p>💡 <strong>小贴士</strong>：首次部署可能需要等待 5-10 分钟才能访问，这是正常现象。</p>
+
 </div>
 
 <h2 id="☁️-部署到-Cloudflare-Pages（可选）"><a href="#☁️-部署到-Cloudflare-Pages（可选）" class="headerlink" title="☁️ 部署到 Cloudflare Pages（可选）"></a>☁️ 部署到 Cloudflare Pages（可选）</h2><p>除了 GitHub Pages，你还可以将博客部署到 Cloudflare Pages，这样可以获得更好的访问速度和更多的功能。</p>
@@ -644,7 +667,16 @@
 <li>重新打开 VSCode 尝试执行 Hexo 命令</li>
 </ol>
 <h2 id="📋-常用-Hexo-命令汇总"><a href="#📋-常用-Hexo-命令汇总" class="headerlink" title="📋 常用 Hexo 命令汇总"></a>📋 常用 Hexo 命令汇总</h2><p>以下所有命令都需要在博客根目录下的终端中执行：</p>
-<div class="tabs" id="hexo-commands"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="hexo-commands-1">📝 文章管理</button><button type="button" class="tab " data-href="hexo-commands-2">🔧 生成与服务</button><button type="button" class="tab " data-href="hexo-commands-3">🚀 部署</button><button type="button" class="tab " data-href="hexo-commands-4">ℹ️ 其他</button></ul><div class="tab-contents"><div class="tab-item-content active" id="hexo-commands-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建文章</span></span><br><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建页面</span></span><br><span class="line">hexo new page <span class="string">&quot;页面名称&quot;</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="hexo-commands-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo generate</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动本地服务器</span></span><br><span class="line">hexo server</span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清理缓存</span></span><br><span class="line">hexo clean</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="hexo-commands-3"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 部署到远程</span></span><br><span class="line">hexo deploy</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一键生成并部署</span></span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="hexo-commands-4"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看版本</span></span><br><span class="line">hexo version</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看帮助</span></span><br><span class="line">hexo <span class="built_in">help</span></span><br></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div>
+<div class="tabs">
+<section class="tab-section"><h3 class="tab-title">📝 文章管理</h3><div class="tab-content"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建文章</span></span><br><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建页面</span></span><br><span class="line">hexo new page <span class="string">&quot;页面名称&quot;</span></span><br></pre></td></tr></table></figure>
+</div></section>
+<section class="tab-section"><h3 class="tab-title">🔧 生成与服务</h3><div class="tab-content"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo generate</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动本地服务器</span></span><br><span class="line">hexo server</span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清理缓存</span></span><br><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+</div></section>
+<section class="tab-section"><h3 class="tab-title">🚀 部署</h3><div class="tab-content"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 部署到远程</span></span><br><span class="line">hexo deploy</span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一键生成并部署</span></span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+</div></section>
+<section class="tab-section"><h3 class="tab-title">ℹ️ 其他</h3><div class="tab-content"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看版本</span></span><br><span class="line">hexo version</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看帮助</span></span><br><span class="line">hexo <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+</div></section>
+</div>
 
 <h2 id="💡-实用技巧"><a href="#💡-实用技巧" class="headerlink" title="💡 实用技巧"></a>💡 实用技巧</h2><h3 id="🗂️-自动生成目录页面"><a href="#🗂️-自动生成目录页面" class="headerlink" title="🗂️ 自动生成目录页面"></a>🗂️ 自动生成目录页面</h3><p>为了让博客更加完整，你可能需要创建分类页面、标签页面和关于页面：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
@@ -662,7 +694,8 @@
 <p>然后在 <code>_config.yml</code> 中添加配置：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="⚠️-注意事项"><a href="#⚠️-注意事项" class="headerlink" title="⚠️ 注意事项"></a>⚠️ 注意事项</h2><div class="note warning flat"><p><strong>重要提醒</strong></p>
+<h2 id="⚠️-注意事项"><a href="#⚠️-注意事项" class="headerlink" title="⚠️ 注意事项"></a>⚠️ 注意事项</h2><div class=" note note-warning warning flat">
+<p><strong>重要提醒</strong></p>
 <ol>
 <li><strong>终端位置很重要</strong>：所有 Hexo 命令都必须在博客根目录下执行，否则会报错</li>
 <li><strong>命令执行环境</strong>：<ul>
@@ -674,21 +707,26 @@
 <li><strong>路径问题</strong>：Windows 系统中，如果路径包含空格或特殊字符，可能需要使用引号括起来</li>
 <li><strong>权限问题</strong>：如果遇到权限错误，可以尝试以管理员身份运行终端</li>
 </ol>
+
 </div>
 
 <h2 id="🎉-总结"><a href="#🎉-总结" class="headerlink" title="🎉 总结"></a>🎉 总结</h2><p>通过本教程，我们完成了基于 Hexo 框架的个人博客搭建。从环境配置、初始化到部署，每一步都有详细的说明。我们还介绍了如何将博客部署到 GitHub Pages 和 Cloudflare Pages，以及一些常见问题的解决方法和实用技巧。</p>
-<div class="note success flat"><p>🌟 <strong>恭喜你！</strong> 现在你已经拥有了一个完全属于自己的博客！这种方式搭建的博客：</p>
+<div class=" note note-success success flat">
+<p>🌟 <strong>恭喜你！</strong> 现在你已经拥有了一个完全属于自己的博客！这种方式搭建的博客：</p>
 <ul>
 <li>✅ <strong>完全免费</strong> - 无需购买服务器</li>
 <li>✅ <strong>简单易用</strong> - 只需要一些基础的编程知识</li>
 <li>✅ <strong>高度可定制</strong> - 支持各种主题和插件</li>
 <li>✅ <strong>稳定可靠</strong> - 基于成熟的技术栈</li>
 </ul>
+
 </div>
 
 <p>在下一篇文章中，我们将介绍如何安装和配置美观的 AnZhiYu 主题，让你的博客更加个性化和美观。</p>
-<div class="note info flat"><p>💬 <strong>互动时间</strong><br>如果在搭建过程中遇到任何问题，欢迎在评论区留言讨论。也欢迎分享你的博客链接，让我们一起交流学习！</p>
+<div class=" note note-info info flat">
+<p>💬 <strong>互动时间</strong><br>如果在搭建过程中遇到任何问题，欢迎在评论区留言讨论。也欢迎分享你的博客链接，让我们一起交流学习！</p>
 <p>记得关注我的博客，获取更多技术分享和教程。祝你的博客之旅愉快！☕️</p>
+
 </div>
 ]]></content>
       <categories>

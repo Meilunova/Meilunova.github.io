@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mike_Tea</title>
+  <title>Peanut Butter</title>
   <icon>https://meilunova.github.io/icon.png</icon>
   <subtitle>分享生活中的小美好</subtitle>
   <link href="https://meilunova.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://meilunova.github.io/</id>
   
   <author>
-    <name>奶茶味的香草</name>
+    <name>花生酱拌饭</name>
     
   </author>
   

@@ -205,6 +205,8 @@
   async function aiAbstract(num = basicWordCount) {
     if (mode === "tianli") {
       await aiAbstractTianli(num);
+    } else if (mode === "gemini") {
+      await aiAbstractGemini(num);
     } else {
       aiAbstractLocal();
     }
@@ -298,6 +300,116 @@
     }, 600);
   }
 
+  async function aiAbstractGemini(num) {
+    indexI = 0;
+    indexJ = 1;
+    clearTimeouts();
+    animationRunning = false;
+    elapsed = 0;
+    observer.disconnect();
+
+    // 1) OpenAI兼容代理优先
+    const proxy = getProxyConfig();
+    if (proxy.base && proxy.key) {
+      console.log("[AI Abstract] Using proxy base:", proxy.base, "model:", proxy.model);
+      try {
+        const promptBase = (title + pageFillDescription).trim();
+        const truncateDescription = promptBase.substring(0, Math.max(300, Math.min(2000, num)));
+        const prompt = `请用中文为以下文章生成一段150~200字的摘要，要求精炼、通俗易懂，不要使用Markdown，只返回纯文本。\n\n标题：${title}\n内容：${truncateDescription}`;
+
+        const url = `${proxy.base.replace(/\/$/, "")}/chat/completions`;
+        const body = {
+          model: proxy.model || "gemini-1.5-flash",
+          temperature: 0.5,
+          messages: [
+            { role: "system", content: "你是一个中文摘要助手，只输出150~200字纯文本摘要。" },
+            { role: "user", content: prompt }
+          ]
+        };
+        const res = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${proxy.key}`
+          },
+          body: JSON.stringify(body)
+        });
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        const data = await res.json();
+        const text = data?.choices?.[0]?.message?.content || "代理未返回摘要，请稍后重试。";
+        setTimeout(() => { aiTitleRefreshIcon.style.opacity = "1"; }, 300);
+        startAI(String(text).trim());
+        return;
+      } catch (e) {
+        console.warn("[AI Abstract] Proxy call failed, fallback to Google SDK.", e);
+        // 失败后继续走正规Google API路线
+      }
+    }
+
+    const keys = getGeminiKeys();
+    console.log("[AI Abstract] Trying Gemini Keys:", keys);
+    if (!keys.length) {
+      startAI("未配置 Gemini API Key，请在 post_head_ai_description.key 中填写，或在浏览器控制台执行 localStorage.setItem('GEMINI_API_KEY','你的Key') 后刷新。");
+      return;
+    }
+
+    const promptBase = (title + pageFillDescription).trim();
+    const truncateDescription = promptBase.substring(0, Math.max(300, Math.min(2000, num)));
+    const prompt = `请用中文为以下文章生成一段150~200字的摘要，要求精炼、通俗易懂，不要使用Markdown，只返回纯文本。\n\n标题：${title}\n内容：${truncateDescription}`;
+
+    let animationInterval = null;
+    if (animationInterval) clearInterval(animationInterval);
+    animationInterval = setInterval(() => {
+      const animationText = "生成中" + ".".repeat(indexJ);
+      explanation.innerHTML = animationText;
+      indexJ = (indexJ % 3) + 1;
+    }, 500);
+
+    try {
+      const body = { contents: [{ parts: [{ text: prompt }] }] };
+      let success = false;
+      for (const apiKey of keys) {
+        try {
+          console.log(`[AI Abstract] Attempting with key: ${apiKey.substring(0, 8)}...`);
+          const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+          const res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+          if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+          const data = await res.json();
+          const text = (data?.candidates?.[0]?.content?.parts || []).map(p => p.text).join("") || "Gemini 未返回摘要，请稍后重试。";
+          setTimeout(() => { aiTitleRefreshIcon.style.opacity = "1"; }, 300);
+          startAI(String(text || "生成失败，请检查Key或配额。").trim());
+          success = true;
+          break;
+        } catch (inner) {
+          console.warn(`[AI Abstract] Key ${apiKey.substring(0, 8)}... failed.`, inner);
+          continue;
+        }
+      }
+      if (!success) startAI("所有 Gemini Key 调用失败，请检查配额或网络。");
+    } catch (e) {
+      console.error(e);
+      startAI("调用 Gemini 接口失败，请检查网络或API Key限制。");
+    } finally {
+      if (animationInterval) clearInterval(animationInterval);
+    }
+
+    function getGeminiKeys() {
+      const fromConfig = String(AIKey || '').split(',').map(s => s.trim()).filter(Boolean);
+      const lsSingle = (localStorage.getItem('GEMINI_API_KEY') || '').trim();
+      const lsMulti = (localStorage.getItem('GEMINI_API_KEYS') || '').split(',').map(s => s.trim()).filter(Boolean);
+      const all = [...fromConfig, ...lsMulti, lsSingle].filter(Boolean);
+      // 去重
+      return Array.from(new Set(all));
+    }
+
+    function getProxyConfig() {
+      const base = (localStorage.getItem('GEMINI_PROXY_BASE') || '').trim();
+      const key = (localStorage.getItem('GEMINI_PROXY_KEY') || '').trim();
+      const model = (localStorage.getItem('GEMINI_PROXY_MODEL') || 'gemini-1.5-flash').trim();
+      return { base, key, model };
+    }
+  }
+
   function aiRecommend() {
     indexI = 0;
     indexJ = 1;
@@ -361,6 +473,8 @@
   function introduce() {
     if (mode == "tianli") {
       startAI("我是文章辅助AI: TianliGPT，点击下方的按钮，让我生成本文简介、推荐相关文章等。");
+    } else if (mode === "gemini") {
+      startAI("我是文章辅助AI: Gemini，总结内容由 Google Gemini 提供，点击下方的按钮让我为你生成简介。");
     } else {
       startAI(`我是文章辅助AI: ${gptName} GPT，点击下方的按钮，让我生成本文简介、推荐相关文章等。`);
     }
@@ -431,6 +545,8 @@
   function showAiBtn() {
     if (mode === "tianli") {
       document.getElementById("ai-tag").innerHTML = "TianliGPT";
+    } else if (mode === "gemini") {
+      document.getElementById("ai-tag").innerHTML = "Gemini";
     } else {
       document.getElementById("ai-tag").innerHTML = gptName + " GPT";
     }

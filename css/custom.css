@@ -1,4 +1,19 @@
 /* 奶茶味的香草 - 自定义样式 */
+/* 通用 Note 样式，兼容 {% note %} 标签 */
+.note { border-radius: 8px; padding: 14px 16px; margin: 12px 0; background: rgba(255,255,255,.6); border: 1px solid rgba(210,180,140,.3); }
+.note p { margin: 0.4em 0; }
+.note-info { background: rgba(70, 170, 255, 0.12); border-color: rgba(70,170,255,.35); }
+.note-success { background: rgba(46, 204, 113, 0.12); border-color: rgba(46,204,113,.35); }
+.note-warning { background: rgba(241, 196, 15, 0.15); border-color: rgba(241,196,15,.35); }
+.note-danger { background: rgba(231, 76, 60, 0.12); border-color: rgba(231,76,60,.35); }
+.note-primary { background: rgba(210,180,140, .18); border-color: rgba(210,180,140,.45); }
+.note-secondary { background: rgba(149, 165, 166, 0.15); border-color: rgba(149,165,166,.35); }
+
+/* 简易 tabs 渲染样式，兼容 {% tabs %} */
+.tabs { border: 1px solid rgba(210,180,140,.3); border-radius: 8px; padding: 10px; background: rgba(255,255,255,.5); }
+.tab-section + .tab-section { margin-top: 10px; border-top: 1px dashed rgba(210,180,140,.3); padding-top: 10px; }
+.tab-title { font-size: 15px; margin: 0 0 6px 0; color: #8B7355; }
+.tab-content { font-size: 14px; }
 
 /* ========== 全局背景设置 ========== */
 /* 设置全局背景图片 */
