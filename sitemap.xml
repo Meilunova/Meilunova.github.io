@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>https://meilunova.github.io/2025/10/20/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96%E4%B8%8E%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97/</loc>
-    
-    <lastmod>2025-10-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://meilunova.github.io/favorites/index.html</loc>
     
     <lastmod>2025-08-29</lastmod>
@@ -215,27 +206,6 @@
   
   <url>
     <loc>https://meilunova.github.io/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2025-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://meilunova.github.io/tags/Waline/</loc>
-    <lastmod>2025-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://meilunova.github.io/tags/Cloudflare/</loc>
-    <lastmod>2025-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://meilunova.github.io/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2025-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
