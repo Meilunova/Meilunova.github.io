@@ -733,8 +733,8 @@
         <category>技术分享</category>
       </categories>
       <tags>
-        <tag>博客搭建</tag>
         <tag>Hexo</tag>
+        <tag>博客搭建</tag>
         <tag>GitHub Pages</tag>
         <tag>Cloudflare Pages</tag>
         <tag>技术教程</tag>
@@ -845,9 +845,9 @@
         <category>博客搭建</category>
       </categories>
       <tags>
+        <tag>Hexo</tag>
         <tag>博客搭建</tag>
         <tag>前端开发</tag>
-        <tag>Hexo</tag>
         <tag>AnZhiYu主题</tag>
         <tag>主题配置</tag>
       </tags>

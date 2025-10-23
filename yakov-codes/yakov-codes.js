@@ -1,38 +1,51 @@
-// Yakov Codes Page JavaScript - Based on Music Share Design
+// Yakov Codes Page JavaScript - Masonry Gallery + Detail Mode
 (function() {
     'use strict';
 
+    // ========== 状态管理 ==========
+    let currentMode = 'gallery'; // 'gallery' or 'detail'
     let currentCategory = 'all';
     let currentSubcategory = '';
     let searchQuery = '';
     let allAnimalsData = [];
+    let currentDetailAnimal = null;
+    let lastRenderedList = [];
 
-
-    // DOM elements (will be initialized after DOM ready)
+    // ========== DOM 元素 ==========
     let searchInput;
     let clearSearchBtn;
     let filterContainer;
     let subFilterContainer;
-    let animalsGrid;
+    let galleryMode;
+    let detailMode;
+    let animalsMasonry;
+    let animalsList;
+    let detailPanelBody;
+    let closeDetailBtn;
     let noResultsMessage;
 
-    // Initialize the page
+    // ========== 初始化 ==========
     function init() {
-        // Initialize DOM elements
+        // 初始化 DOM 元素
         searchInput = document.getElementById('yakov-search-input');
         clearSearchBtn = document.getElementById('clear-search-btn');
         filterContainer = document.querySelector('.filter-container');
         subFilterContainer = document.querySelector('.sub-filter-container');
-        animalsGrid = document.querySelector('.animals-grid');
+        galleryMode = document.querySelector('.gallery-mode');
+        detailMode = document.querySelector('.detail-mode');
+        animalsMasonry = document.querySelector('.animals-masonry');
+        animalsList = document.querySelector('.animals-list');
+        detailPanelBody = document.querySelector('.detail-panel-body');
+        closeDetailBtn = document.querySelector('.close-detail-btn');
         noResultsMessage = document.querySelector('.no-results-message');
 
-        // Check if elements exist
-        if (!searchInput || !filterContainer || !animalsGrid) {
+        // 检查必要元素
+        if (!searchInput || !filterContainer || !animalsMasonry) {
             console.error('Required DOM elements not found');
             return;
         }
 
-        // Check if data is loaded
+        // 检查数据
         if (typeof window.yakovAnimalsData === 'undefined') {
             showError('动物数据加载失败，请刷新页面重试。');
             return;
@@ -40,11 +53,12 @@
 
         generateAllAnimalsData();
         renderMainFilters();
-        renderAnimalCards();
+        renderGalleryCards();
+        renderStatsCard();
         bindEvents();
     }
 
-    // Generate flattened animals data for search（带智能分类）
+    // ========== 数据处理 ==========
     function generateAllAnimalsData() {
         allAnimalsData = window.yakovAnimalsData.map(animal => {
             const c = classifyByName(animal.name);
@@ -57,7 +71,7 @@
         });
     }
 
-    // 智能分类：返回 { categoryKey, categoryTitle, tags }
+    // 智能分类
     function classifyByName(name) {
         const n = (name || '').toLowerCase();
 
@@ -121,11 +135,32 @@
         return { categoryKey: 'abstract', categoryTitle: '🤪 抽象搞怪', tags: '抽象 创意' };
     }
 
-    // Render main category filter buttons
+    // 过滤数据
+    function getFilteredAnimals() {
+        let filtered = allAnimalsData;
+
+        if (currentCategory !== 'all') {
+            filtered = filtered.filter(item => item.categoryKey === currentCategory);
+        }
+
+        if (searchQuery) {
+            const query = searchQuery.toLowerCase();
+            filtered = filtered.filter(item => {
+                return item.name.toLowerCase().includes(query) ||
+                       item.id.toLowerCase().includes(query) ||
+                       (item.tags && item.tags.toLowerCase().includes(query));
+            });
+        }
+
+        return filtered;
+    }
+
+    // ========== 渲染函数 ==========
+    
+    // 渲染主分类按钮
     function renderMainFilters() {
         let html = '<button class="filter-btn active" data-category="all">🌈 全部</button>';
 
-        // 新的五大分类
         const categories = {
             'meme':     { title: '🎭 网络热梗' },
             'acg':      { title: '🎮 动漫游戏' },
@@ -144,233 +179,104 @@
         filterContainer.innerHTML = html;
     }
 
-    // Filter animals data based on current filters and search
-    function getFilteredAnimals() {
-        let filtered = allAnimalsData;
-
-        // Filter by category（使用分类键）
-        if (currentCategory !== 'all') {
-            filtered = filtered.filter(item => item.categoryKey === currentCategory);
-        }
-
-        // Filter by search query
-        if (searchQuery) {
-            const query = searchQuery.toLowerCase();
-            filtered = filtered.filter(item => {
-                return item.name.toLowerCase().includes(query) ||
-                       item.id.toLowerCase().includes(query) ||
-                       (item.tags && item.tags.toLowerCase().includes(query));
-            });
-        }
-
-        return filtered;
-    }
-
-    // Render animal cards
-    function renderAnimalCards() {
+    // 渲染画廊模式（瀑布流）
+    function renderGalleryCards() {
         const filteredAnimals = getFilteredAnimals();
+        lastRenderedList = filteredAnimals;
 
         if (filteredAnimals.length === 0) {
-            animalsGrid.innerHTML = '';
+            animalsMasonry.innerHTML = '';
             noResultsMessage.style.display = 'block';
             return;
         }
 
         noResultsMessage.style.display = 'none';
 
-        const cardsHTML = filteredAnimals.map(animal => createAnimalCard(animal)).join('');
-        animalsGrid.innerHTML = cardsHTML;
+        const cardsHTML = filteredAnimals.map((animal, index) => createMasonryCard(animal, index)).join('');
+        animalsMasonry.innerHTML = cardsHTML;
 
-        // Bind copy and expand buttons
-        bindCardButtons();
+        // 绑定卡片事件
+        bindMasonryCardEvents();
 
-        // 更新右侧统计
-        renderStatsCard(filteredAnimals);
-
+        // 更新统计
+        renderStatsCard();
     }
 
-    // Create a single animal card HTML
-    function createAnimalCard(animal) {
-        const tags = String(animal.tags || '').split(' ').filter(Boolean).map(tag => 
-            `<span class="animal-tag">${tag}</span>`
-        ).join('');
+    // 创建瀑布流卡片
+    function createMasonryCard(animal, index) {
+        const tagsArr = String(animal.tags || '').split(' ').filter(Boolean);
+        const tagsHTML = tagsArr.map(tag => `<span class="masonry-card-tag">${tag}</span>`).join('');
 
         return `
-            <div class="animal-card" data-animal-id="${animal.id}">
-                <img src="${animal.image}" alt="${animal.name}" class="animal-cover" loading="lazy">
-                <div class="animal-info">
-                    <h3 class="animal-title">${animal.name}</h3>
-                    <p class="animal-id">#${animal.id}</p>
-
-                    <button class="expand-btn" data-action="expand">
-                        <i class="fas fa-chevron-down"></i> 查看完整代码
-                    </button>
-
-                    <div class="code-full">
-                        <pre>${escapeHtml(animal.code)}</pre>
-                    </div>
-
-                    <div class="detail-item">
-                        <button class="copy-btn" data-code="${escapeHtml(animal.code)}" title="复制代码">
-                            <i class="fas fa-copy"></i> 复制代码
+            <div class="masonry-card" data-animal-id="${animal.id}" data-index="${index}">
+                <img src="${animal.image}" alt="${animal.name}" class="masonry-card-image" loading="lazy">
+                <div class="masonry-card-info">
+                    <div class="masonry-card-title">${animal.name}</div>
+                    <div class="masonry-card-tags">${tagsHTML}</div>
+                    <div class="masonry-card-actions">
+                        <button class="masonry-card-btn masonry-card-btn-copy" data-action="copy">
+                            <i class="fas fa-copy"></i> 复制
                         </button>
-                        ${animal.sourceUrl ? `
-                        <button class="source-btn" onclick="window.open('${animal.sourceUrl}', '_blank')" title="查看原文">
-                            <i class="fas fa-external-link-alt"></i> 查看原文
+                        <button class="masonry-card-btn masonry-card-btn-detail" data-action="detail">
+                            <i class="fas fa-eye"></i> 详情
                         </button>
-                        ` : ''}
-                    </div>
-
-                    <div class="animal-tags">
-                        ${tags}
                     </div>
                 </div>
             </div>
         `;
     }
 
-    // Bind copy and expand button events
-    function bindCardButtons() {
-        // Copy buttons
-        document.querySelectorAll('.copy-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const card = this.closest('.animal-card');
-                const pre = card ? card.querySelector('.code-full pre') : null;
-                const code = pre ? pre.textContent : (this.getAttribute('data-code') || '');
-                copyToClipboard(code, this);
-            });
-        });
-
-        // Expand buttons
-        document.querySelectorAll('.expand-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const card = this.closest('.animal-card');
-                const codeBlock = card.querySelector('.code-full');
-                const isExpanded = codeBlock.classList.contains('show');
-
-                if (isExpanded) {
-                    codeBlock.classList.remove('show');
-                    this.innerHTML = '<i class="fas fa-chevron-down"></i> 查看完整代码';
-                } else {
-                    codeBlock.classList.add('show');
-                    this.innerHTML = '<i class="fas fa-chevron-up"></i> 收起代码';
-                }
-            });
-        });
-
-
-    }
-
-    // Copy to clipboard
-    function copyToClipboard(text, button) {
-        // Decode HTML entities
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = text;
-        const decodedText = tempDiv.textContent || tempDiv.innerText;
-
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(decodedText).then(() => {
-                showCopySuccess(button);
-            }).catch(() => {
-                fallbackCopy(decodedText, button);
-            });
-        } else {
-            fallbackCopy(decodedText, button);
-        }
-    }
-
-    // Fallback copy method
-    function fallbackCopy(text, button) {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        textarea.style.position = 'fixed';
-        textarea.style.opacity = '0';
-        document.body.appendChild(textarea);
-        textarea.select();
-        
-        try {
-            document.execCommand('copy');
-            showCopySuccess(button);
-        } catch (err) {
-            console.error('复制失败:', err);
-        }
-        
-        document.body.removeChild(textarea);
-    }
-
-    // Show copy success feedback
-    function showCopySuccess(button) {
-        const originalHTML = button.innerHTML;
-        button.classList.add('copied');
-        button.innerHTML = '<i class="fas fa-check"></i> 已复制！';
-        
-        setTimeout(() => {
-            button.classList.remove('copied');
-            button.innerHTML = originalHTML;
-        }, 2000);
-    }
-
-
-
-    // Bind events
-    function bindEvents() {
-        // Search input
-        searchInput.addEventListener('input', debounce(function() {
-            searchQuery = this.value.trim();
-            clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
-            renderAnimalCards();
-        }, 300));
-
-        // Clear search button
-        clearSearchBtn.addEventListener('click', function() {
-            searchInput.value = '';
-            searchQuery = '';
-            this.style.display = 'none';
-            renderAnimalCards();
-            searchInput.focus();
-        });
-
-        // Filter buttons
-        filterContainer.addEventListener('click', function(e) {
-            const btn = e.target.closest('.filter-btn');
-            if (!btn) return;
-
-            // Update active state
-            filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Update category
-            currentCategory = btn.getAttribute('data-category');
-            currentSubcategory = '';
-
-            // Hide subcategory filters
-            subFilterContainer.innerHTML = '';
-            subFilterContainer.style.display = 'none';
-
-            // Render cards
-            renderAnimalCards();
-        });
-
-        // Tag click to search
-        animalsGrid.addEventListener('click', function(e) {
-            if (e.target.classList.contains('animal-tag')) {
-                const tagText = e.target.textContent.trim();
-                searchInput.value = tagText;
-                searchQuery = tagText;
-                clearSearchBtn.style.display = 'block';
-                renderAnimalCards();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+    // 绑定瀑布流卡片事件
+    function bindMasonryCardEvents() {
+        animalsMasonry.querySelectorAll('.masonry-card').forEach(card => {
+            const idxAttr = card.getAttribute('data-index');
+            const idx = typeof idxAttr === 'string' ? parseInt(idxAttr, 10) : -1;
+            let animal = (Number.isInteger(idx) && idx >= 0 && idx < lastRenderedList.length)
+                ? lastRenderedList[idx]
+                : null;
+            if (!animal) {
+                const animalId = card.getAttribute('data-animal-id');
+                animal = allAnimalsData.find(a => String(a.id) === String(animalId));
             }
+            
+            if (!animal) return;
+
+            // 复制按钮
+            const copyBtn = card.querySelector('[data-action="copy"]');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    copyToClipboard(animal.code, copyBtn);
+                });
+            }
+
+            // 详情按钮
+            const detailBtn = card.querySelector('[data-action="detail"]');
+            if (detailBtn) {
+                detailBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    switchToDetailMode(animal);
+                });
+            }
+
+            // 整个卡片点击也可以进入详情
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchToDetailMode(animal);
+            });
         });
     }
 
-    // 渲染右侧统计卡片
-    function renderStatsCard(currentList) {
+    // 渲染统计卡片
+    function renderStatsCard() {
         const statsEl = document.getElementById('yakov-stats-card');
         if (!statsEl) return;
 
         const totalAll = allAnimalsData.length;
-        const totalShown = currentList.length;
+        const filteredAnimals = getFilteredAnimals();
+        const totalShown = filteredAnimals.length;
 
         const groups = ['🎭 网络热梗','🎮 动漫游戏','🤪 抽象搞怪','💖 可爱萌物','😎 硬核酷炫'];
 
@@ -389,9 +295,247 @@
         `;
     }
 
+    // ========== 模式切换 ==========
 
+    // 切换到详情模式
+    function switchToDetailMode(animal) {
+        if (!animal) return;
+        
+        currentMode = 'detail';
+        currentDetailAnimal = animal;
 
-    // Debounce function
+        // 切换模式显示
+        galleryMode.classList.remove('active');
+        detailMode.classList.add('active');
+
+        // 渲染详情模式的列表和详情
+        renderDetailModeList();
+        renderDetailPanel(animal);
+
+        // 滚动到顶部
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // 滚动到当前选中的项目（使用更长的延迟确保DOM渲染完成）
+        setTimeout(() => {
+            const activeItem = animalsList.querySelector(`.list-item-card[data-animal-id="${animal.id}"]`);
+            if (activeItem) {
+                // 确保active类已经添加
+                activeItem.classList.add('active');
+                activeItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }, 200);
+    }
+
+    // 切换回画廊模式
+    function switchToGalleryMode() {
+        currentMode = 'gallery';
+        currentDetailAnimal = null;
+
+        // 切换模式显示
+        detailMode.classList.remove('active');
+        galleryMode.classList.add('active');
+    }
+
+    // 渲染详情模式的左侧列表
+    function renderDetailModeList() {
+        const filteredAnimals = getFilteredAnimals();
+
+        const listHTML = filteredAnimals.map(animal => {
+            const isActive = currentDetailAnimal && animal.id === currentDetailAnimal.id;
+            return `
+                <div class="list-item-card ${isActive ? 'active' : ''}" data-animal-id="${animal.id}">
+                    <img src="${animal.image}" alt="${animal.name}" class="list-item-image">
+                    <div class="list-item-info">
+                        <div class="list-item-title">${animal.name}</div>
+                        <div class="list-item-category">${animal.categoryTitle}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        animalsList.innerHTML = listHTML;
+
+        // 绑定列表项点击事件
+        animalsList.querySelectorAll('.list-item-card').forEach(item => {
+            const animalId = item.getAttribute('data-animal-id');
+            const animal = allAnimalsData.find(a => a.id === animalId);
+            
+            if (animal) {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentDetailAnimal = animal;
+                    renderDetailModeList(); // 重新渲染列表（更新高亮）
+                    renderDetailPanel(animal); // 更新详情面板
+                });
+            }
+        });
+    }
+
+    // 渲染右侧详情面板
+    function renderDetailPanel(animal) {
+        const tagsArr = String(animal.tags || '').split(' ').filter(Boolean);
+        const tagsHTML = tagsArr.map(tag => `<span class="detail-tag">${tag}</span>`).join('');
+
+        const detailHTML = `
+            <div class="detail-content">
+                <div class="detail-image-container">
+                    <img src="${animal.image}" alt="${animal.name}" class="detail-image">
+                </div>
+                
+                <h2 class="detail-title">${animal.name}</h2>
+                
+                <div class="detail-meta">
+                    <span class="detail-category">${animal.categoryTitle}</span>
+                </div>
+                
+                ${tagsHTML ? `
+                <div class="detail-tags-container">
+                    ${tagsHTML}
+                </div>
+                ` : ''}
+                
+                <div class="detail-code-section">
+                    <div class="detail-code-header">
+                        <h3 class="detail-code-title">捏脸代码</h3>
+                        <button class="detail-copy-btn" data-code="${escapeHtml(animal.code)}" title="复制到剪贴板">
+                            <i class="fas fa-copy"></i> 复制代码
+                        </button>
+                    </div>
+                    <div class="detail-code-block">
+                        <pre>${escapeHtml(animal.code)}</pre>
+                    </div>
+                </div>
+                
+                ${animal.sourceUrl ? `
+                <div class="detail-source-link">
+                    <a href="${animal.sourceUrl}" target="_blank" class="detail-source-btn">
+                        <i class="fas fa-external-link-alt"></i> 查看原文链接
+                    </a>
+                </div>
+                ` : ''}
+            </div>
+        `;
+
+        detailPanelBody.innerHTML = detailHTML;
+
+        // 绑定复制按钮
+        const copyBtn = detailPanelBody.querySelector('.detail-copy-btn');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function() {
+                copyToClipboard(animal.code, this);
+            });
+        }
+    }
+
+    // ========== 事件绑定 ==========
+    function bindEvents() {
+        // 搜索输入
+        searchInput.addEventListener('input', debounce(function() {
+            searchQuery = this.value.trim();
+            clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+            
+            if (currentMode === 'gallery') {
+                renderGalleryCards();
+            } else {
+                renderDetailModeList();
+            }
+        }, 300));
+
+        // 清除搜索
+        clearSearchBtn.addEventListener('click', function() {
+            searchInput.value = '';
+            searchQuery = '';
+            this.style.display = 'none';
+            
+            if (currentMode === 'gallery') {
+                renderGalleryCards();
+            } else {
+                renderDetailModeList();
+            }
+            
+            searchInput.focus();
+        });
+
+        // 分类过滤
+        filterContainer.addEventListener('click', function(e) {
+            const btn = e.target.closest('.filter-btn');
+            if (!btn) return;
+
+            filterContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            currentCategory = btn.getAttribute('data-category');
+            currentSubcategory = '';
+
+            subFilterContainer.innerHTML = '';
+            subFilterContainer.style.display = 'none';
+
+            if (currentMode === 'gallery') {
+                renderGalleryCards();
+            } else {
+                renderDetailModeList();
+            }
+        });
+
+        // 关闭详情模式按钮
+        if (closeDetailBtn) {
+            closeDetailBtn.addEventListener('click', () => {
+                switchToGalleryMode();
+            });
+        }
+    }
+
+    // ========== 工具函数 ==========
+
+    // 复制到剪贴板
+    function copyToClipboard(text, button) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = text;
+        const decodedText = tempDiv.textContent || tempDiv.innerText;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(decodedText).then(() => {
+                showCopySuccess(button);
+            }).catch(() => {
+                fallbackCopy(decodedText, button);
+            });
+        } else {
+            fallbackCopy(decodedText, button);
+        }
+    }
+
+    // 降级复制方法
+    function fallbackCopy(text, button) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        
+        try {
+            document.execCommand('copy');
+            showCopySuccess(button);
+        } catch (err) {
+            console.error('复制失败:', err);
+        }
+        
+        document.body.removeChild(textarea);
+    }
+
+    // 显示复制成功反馈
+    function showCopySuccess(button) {
+        const originalHTML = button.innerHTML;
+        button.classList.add('copied');
+        button.innerHTML = '<i class="fas fa-check"></i> 已复制！';
+        
+        setTimeout(() => {
+            button.classList.remove('copied');
+            button.innerHTML = originalHTML;
+        }, 2000);
+    }
+
+    // 防抖
     function debounce(func, wait) {
         let timeout;
         return function executedFunction(...args) {
@@ -404,19 +548,19 @@
         };
     }
 
-    // Escape HTML
+    // HTML 转义
     function escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
     }
 
-    // Show error message
+    // 显示错误
     function showError(message) {
-        animalsGrid.innerHTML = `<div class="loading">${message}</div>`;
+        animalsMasonry.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-color-tertiary);">${message}</div>`;
     }
 
-    // Initialize when DOM is ready
+    // ========== 启动 ==========
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
@@ -424,4 +568,3 @@
     }
 
 })();
-
