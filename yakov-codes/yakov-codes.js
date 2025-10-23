@@ -317,7 +317,8 @@
 
         // 滚动到当前选中的项目（使用更长的延迟确保DOM渲染完成）
         setTimeout(() => {
-            const activeItem = animalsList.querySelector(`.list-item-card[data-animal-id="${animal.id}"]`);
+            const uid = getAnimalUID(animal);
+            const activeItem = animalsList.querySelector(`.list-item-card[data-uid="${uid}"]`);
             if (activeItem) {
                 // 确保active类已经添加
                 activeItem.classList.add('active');
@@ -341,9 +342,10 @@
         const filteredAnimals = getFilteredAnimals();
 
         const listHTML = filteredAnimals.map(animal => {
-            const isActive = currentDetailAnimal && animal.id === currentDetailAnimal.id;
+            const isActive = currentDetailAnimal && getAnimalUID(animal) === getAnimalUID(currentDetailAnimal);
+            const uid = getAnimalUID(animal);
             return `
-                <div class="list-item-card ${isActive ? 'active' : ''}" data-animal-id="${animal.id}">
+                <div class="list-item-card ${isActive ? 'active' : ''}" data-animal-id="${animal.id}" data-uid="${uid}">
                     <img src="${animal.image}" alt="${animal.name}" class="list-item-image">
                     <div class="list-item-info">
                         <div class="list-item-title">${animal.name}</div>
@@ -357,8 +359,8 @@
 
         // 绑定列表项点击事件
         animalsList.querySelectorAll('.list-item-card').forEach(item => {
-            const animalId = item.getAttribute('data-animal-id');
-            const animal = allAnimalsData.find(a => a.id === animalId);
+            const uid = item.getAttribute('data-uid');
+            const animal = allAnimalsData.find(a => getAnimalUID(a) === uid);
             
             if (animal) {
                 item.addEventListener('click', (e) => {
@@ -553,6 +555,14 @@
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
+    }
+
+    // 为动物生成稳定唯一键（处理重复 id 的情况）
+    function getAnimalUID(animal) {
+        if (!animal) return '';
+        const idPart = typeof animal.id === 'string' ? animal.id : String(animal.id || '');
+        const namePart = typeof animal.name === 'string' ? animal.name : String(animal.name || '');
+        return `${idPart}__${namePart}`;
     }
 
     // 显示错误
