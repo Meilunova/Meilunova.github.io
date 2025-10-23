@@ -44,98 +44,94 @@
         bindEvents();
     }
 
-    // Generate flattened animals data for search
+    // Generate flattened animals data for search（带智能分类）
     function generateAllAnimalsData() {
-        allAnimalsData = window.yakovAnimalsData.map(animal => ({
-            ...animal,
-            category: '全部动物',
-            tags: getAnimalTags(animal.name)
-        }));
+        allAnimalsData = window.yakovAnimalsData.map(animal => {
+            const c = classifyByName(animal.name);
+            return {
+                ...animal,
+                categoryKey: c.categoryKey,
+                categoryTitle: c.categoryTitle,
+                tags: c.tags
+            };
+        });
     }
 
-    // Get tags based on animal name
-    function getAnimalTags(name) {
-        // 完整的分类标签映射（格式：'主分类 特征标签1 特征标签2...'）
-        const tagMap = {
-            // 小勇士系列 - 勇猛战斗类
-            '战斗鸡': '小勇士 热血 战斗',
-            '老鹰': '小勇士 勇猛 飞行',
-            '秃鹫': '小勇士 强壮 翱翔',
-            
-            // 毛绒绒系列 - 柔软可爱类
-            '白羽鸡': '毛绒绒 温柔 白色',
-            '猫头鹰': '毛绒绒 夜行 智慧',
-            '团子鸟': '毛绒绒 团子 萌系',
-            
-            // 小水手系列 - 水鸟类
-            '大白鹅': '小水手 优雅 白色',
-            '鹈鹕': '小水手 大嘴 捕鱼',
-            '企鹅': '小水手 极地 呆萌',
-            '海鸥': '小水手 海边 自由',
-            
-            // 小彩虹系列 - 色彩丰富类
-            '乌鸦': '小彩虹 酷酷 黑色',
-            '鹦鹉': '小彩虹 多彩 热带',
-            '小鹦鹉': '小彩虹 可爱 迷你',
-            '大嘴鸟': '小彩虹 大嘴 热带',
-            '小蓝鸟': '小彩虹 蓝色 清新',
-            '白眉': '小彩虹 特征 优雅',
-            
-            // 小可爱系列 - 呆萌搞怪类
-            '傻咕咕': '小可爱 呆萌 咕咕',
-            
-            // 创意系列 - 二创角色
-            '震撼坤坤': '创意角色 恶搞 网络梗',
-            '邪恶痞老板': '创意角色 海绵宝宝 恶搞',
-            '可爱小黄鸡': '创意角色 可爱 黄色',
-            '蝙蝠侠': '创意角色 超级英雄 蝙蝠',
-            '电击小子': '创意角色 超级英雄 闪电',
-            '绿巨人': '创意角色 超级英雄 绿色',
-            '鸭嘴兽泰瑞': '创意角色 飞哥与小佛 特工',
-            '咸蛋超人鸭': '创意角色 奥特曼 超人',
-            '绿绿的猫头鹰-多邻国': '创意角色 多邻国 恶搞',
-            '十字眼鸭鸭': '创意角色 搞怪 表情包'
+    // 智能分类：返回 { categoryKey, categoryTitle, tags }
+    function classifyByName(name) {
+        const n = (name || '').toLowerCase();
+
+        const exactMap = {
+            '坤坤': ['meme', '🎭 网络热梗', ['只因','坤坤']],
+            'ikun': ['meme', '🎭 网络热梗', ['只因','粉丝']],
+            '鸡你太妹': ['meme', '🎭 网络热梗', ['只因','梗']],
+            '鸡你太没': ['meme', '🎭 网络热梗', ['只因','梗']],
+            '歪嘴战神': ['meme', '🎭 网络热梗', ['表情包','魔性']],
+            '歪嘴战神鸭': ['meme', '🎭 网络热梗', ['表情包','魔性']],
+            '电眼逼人扁嘴伦': ['meme', '🎭 网络热梗', ['电眼','帅']],
+            'among us小红人': ['acg', '🎮 动漫游戏', ['AmongUs','游戏']],
+            '假面骑士鸭壳': ['acg', '🎮 动漫游戏', ['特摄','骑士']],
+            'jojo-东方仗鸭': ['acg', '🎮 动漫游戏', ['JOJO','热血']],
+            '奥特鸭': ['acg', '🎮 动漫游戏', ['奥特曼','特摄']],
+            '高达鸭': ['acg', '🎮 动漫游戏', ['机甲','高达']],
+            '初号鸭': ['acg', '🎮 动漫游戏', ['EVA','机甲']],
+            '元气骑士机器人': ['acg', '🎮 动漫游戏', ['元气骑士','机器人']],
+            '加藤惠宝宝': ['acg', '🎮 动漫游戏', ['动漫','加藤惠']],
+            '黄晒儿的春丽': ['acg', '🎮 动漫游戏', ['街霸','春丽']],
+            '鸭嘴兽泰瑞': ['acg', '🎮 动漫游戏', ['飞哥与小佛','特工']],
+            '痞老板': ['acg', '🎮 动漫游戏', ['海绵宝宝','反派']],
+            'aka痞老板（略有磨损）': ['acg', '🎮 动漫游戏', ['海绵宝宝','反派']],
+            '小黄人鸭': ['acg', '🎮 动漫游戏', ['小黄人','电影']],
+            '特异鸭士': ['cool', '😎 硬核酷炫', ['战斗','硬派']],
+            '纽扣眼拳击手': ['cool', '😎 硬核酷炫', ['拳击','硬派']],
+            '钢铁战斗鸡': ['cool', '😎 硬核酷炫', ['钢铁','战斗']],
+            '战斗鸡': ['cool', '😎 硬核酷炫', ['战斗','热血']],
+            '帅鸭': ['cool', '😎 硬核酷炫', ['帅','气场']],
+            '帅': ['cool', '😎 硬核酷炫', ['帅','气场']],
+            '聪明小鸡仔': ['cute', '💖 可爱萌物', ['聪明','小鸡']],
+            '小黄鸭': ['cute', '💖 可爱萌物', ['经典','可爱']],
+            '腮红鸭': ['cute', '💖 可爱萌物', ['腮红','软萌']],
+            '小坤鸭': ['meme', '🎭 网络热梗', ['只因','坤坤']]
         };
-        
-        // 如果找到精确匹配，返回标签
-        if (tagMap[name]) {
-            return tagMap[name];
+
+        if (exactMap[name]) {
+            const [k, t, extra] = exactMap[name];
+            return { categoryKey: k, categoryTitle: t, tags: [t.replace(/^..\s/, ''), ...extra].join(' ') };
         }
-        
-        // 模糊匹配（根据名称关键词自动分类）
-        const keywords = {
-            '鸡': '小勇士 鸡类',
-            '鹰': '小勇士 猛禽',
-            '鹅': '小水手 水鸟',
-            '鸭': '小水手 水鸟',
-            '鹦鹉': '小彩虹 热带',
-            '企鹅': '小水手 极地',
-            '鸟': '小彩虹 飞鸟',
-            '猫头鹰': '毛绒绒 夜行'
-        };
-        
-        for (const [key, tags] of Object.entries(keywords)) {
-            if (name.includes(key)) {
-                return tags;
+
+        const rules = [
+            { key: 'meme', title: '🎭 网络热梗', kws: ['坤','ikun','只因','小黑子','歪嘴','电眼','怎么说','看看','像谁','我就是个','我是谁'] },
+            { key: 'acg', title: '🎮 动漫游戏', kws: ['奥特','假面','jojo','东方','高达','eva','机器人','元气骑士','海绵宝宝','泰瑞','春丽','小黄人','凤凰'] },
+            { key: 'abstract', title: '🤪 抽象搞怪', kws: ['╮','（','）','随便名字','111','中分','方鸭','一只眼','三只眼','疑似','特异','潦草','嘿嘿','摇摇晃摇'] },
+            { key: 'cute', title: '💖 可爱萌物', kws: ['小','萌','可爱','腮红','友好','小黄','小葵花','绿豆','小凤凰','小改','宝宝'] },
+            { key: 'cool', title: '😎 硬核酷炫', kws: ['战斗','钢铁','光之','打人侠','拳击','无敌','电眼','能打','高贵','莫西干'] }
+        ];
+
+        for (const r of rules) {
+            if (r.kws.some(k => n.includes(k.toLowerCase()))) {
+                return { categoryKey: r.key, categoryTitle: r.title, tags: r.title.replace(/^..\s/, '') };
             }
         }
-        
-        // 默认分类
-        return '小可爱 未分类';
+
+        const fallbackKws = ['鸡','鸭','鹅','鸟','鹦鹉','企鹅','猫头鹰','海鸥','鹈鹕','秃鹫','老鹰'];
+        if (fallbackKws.some(k => (name || '').includes(k))) {
+            return { categoryKey: 'cute', categoryTitle: '💖 可爱萌物', tags: '可爱 自然' };
+        }
+
+        return { categoryKey: 'abstract', categoryTitle: '🤪 抽象搞怪', tags: '抽象 创意' };
     }
 
     // Render main category filter buttons
     function renderMainFilters() {
         let html = '<button class="filter-btn active" data-category="all">🌈 全部</button>';
 
-        // 更卡通可爱的分类（纯文本，无图标）
+        // 新的五大分类
         const categories = {
-            'fluffy':   { title: '🧸 毛绒绒' },
-            'brave':    { title: '🛡️ 小勇士' },
-            'sailor':   { title: '⛵ 小水手' },
-            'rainbow':  { title: '🌈 小彩虹' },
-            'cuties':   { title: '💖 小可爱' },
-            'creative': { title: '🎨 创意角色' }
+            'meme':     { title: '🎭 网络热梗' },
+            'acg':      { title: '🎮 动漫游戏' },
+            'abstract': { title: '🤪 抽象搞怪' },
+            'cute':     { title: '💖 可爱萌物' },
+            'cool':     { title: '😎 硬核酷炫' }
         };
 
         Object.keys(categories).forEach(key => {
@@ -152,19 +148,9 @@
     function getFilteredAnimals() {
         let filtered = allAnimalsData;
 
-        // Filter by category
+        // Filter by category（使用分类键）
         if (currentCategory !== 'all') {
-            const categoryMap = {
-                'fluffy':   ['白羽鸡', '猫头鹰', '团子鸟'],
-                'brave':    ['战斗鸡', '老鹰', '秃鹫'],
-                'sailor':   ['大白鹅', '鹈鹕', '企鹅', '海鸥'],
-                'rainbow':  ['乌鸦', '鹦鹉', '小鹦鹉', '大嘴鸟', '小蓝鸟', '白眉'],
-                'cuties':   ['傻咕咕'],
-                'creative': ['震撼坤坤', '邪恶痞老板', '可爱小黄鸡', '蝙蝠侠', '电击小子', '绿巨人', '鸭嘴兽泰瑞', '咸蛋超人鸭', '绿绿的猫头鹰-多邻国', '十字眼鸭鸭']
-            };
-            
-            const allowedNames = categoryMap[currentCategory] || [];
-            filtered = filtered.filter(item => allowedNames.includes(item.name));
+            filtered = filtered.filter(item => item.categoryKey === currentCategory);
         }
 
         // Filter by search query
@@ -205,7 +191,7 @@
 
     // Create a single animal card HTML
     function createAnimalCard(animal) {
-        const tags = animal.tags.split(' ').map(tag => 
+        const tags = String(animal.tags || '').split(' ').filter(Boolean).map(tag => 
             `<span class="animal-tag">${tag}</span>`
         ).join('');
 
@@ -386,17 +372,10 @@
         const totalAll = allAnimalsData.length;
         const totalShown = currentList.length;
 
-        const groups = {
-            '🧸 毛绒绒': ['白羽鸡', '猫头鹰', '团子鸟'],
-            '🛡️ 小勇士': ['战斗鸡', '老鹰', '秃鹫'],
-            '⛵ 小水手': ['大白鹅', '鹈鹕', '企鹅', '海鸥'],
-            '🌈 小彩虹': ['乌鸦', '鹦鹉', '小鹦鹉', '大嘴鸟', '小蓝鸟', '白眉'],
-            '💖 小可爱': ['傻咕咕'],
-            '🎨 创意角色': ['震撼坤坤', '邪恶痞老板', '可爱小黄鸡', '蝙蝠侠', '电击小子', '绿巨人', '鸭嘴兽泰瑞', '咸蛋超人鸭', '绿绿的猫头鹰-多邻国', '十字眼鸭鸭']
-        };
+        const groups = ['🎭 网络热梗','🎮 动漫游戏','🤪 抽象搞怪','💖 可爱萌物','😎 硬核酷炫'];
 
-        const counts = Object.entries(groups).map(([label, names]) => {
-            const count = allAnimalsData.filter(a => names.includes(a.name)).length;
+        const counts = groups.map(label => {
+            const count = allAnimalsData.filter(a => a.categoryTitle === label).length;
             return { label, count };
         });
 
@@ -445,3 +424,4 @@
     }
 
 })();
+
