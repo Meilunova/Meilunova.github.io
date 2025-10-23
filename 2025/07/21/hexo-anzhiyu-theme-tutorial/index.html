@@ -446,12 +446,20 @@ queueMicrotask(() => {
   let initFn = window.walineFn || null
 
   const initWaline = (Fn) => {
+    const normalizePath = (p) => {
+      try {
+        return (p || '/').replace(/index\.html$/i, '').replace(/\/$/, '') || '/'
+      } catch (e) {
+        return '/'
+      }
+    }
+
     const waline = Fn(Object.assign({
       el: '#waline-wrap',
       serverURL: 'https://comments.meilunaria.dpdns.org',
       pageview: true,
       dark: 'html[data-theme="dark"]',
-      path: window.location.pathname,
+      path: normalizePath(window.location.pathname),
       comment: true,
       imageUploader: true,
     }, {"placeholder":"欢迎留言，让我们一起交流~","requiredMeta":["nick","mail"],"avatar":"mp","avatarCDN":"https://sdn.geekzu.org/avatar/"}))
