@@ -825,5 +825,165 @@ window.yakovAnimalsData = [
     "image": "https://imgheybox.max-c.com/bbs/2025/10/16/b33a820525bc5fd23087b9ea0dc0eb43.jpeg",
     "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0.682,\"g\":0.835,\"b\":0.506,\"a\":1},\"headScaleOffset\":-0.4,\"foreheadHeight\":0.269,\"foreheadRound\":1},\"hairID\":6,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":3,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.957,\"g\":0.561,\"b\":0.694,\"a\":1},\"height\":0.3,\"heightOffset\":0,\"scale\":1.1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":1,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0.169,\"g\":0.686,\"b\":0.169,\"a\":1},\"height\":0.075,\"heightOffset\":0.3,\"scale\":1,\"twist\":0,\"distanceAngle\":41.184,\"leftRightAngle\":0},\"mouthID\":0,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.534,\"b\":0.401,\"a\":1},\"height\":0.037,\"heightOffset\":0,\"scale\":0.737,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":3,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0.675,\"b\":0.757,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":0,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":1,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.808,\"g\":0.576,\"b\":0.847,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.001,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
     "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/32838977"
+  },
+  {
+    "id": "animal-619414",
+    "name": "小黄人",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/26/d7e1b9d168fd38fee3aa25f3754f2833.jpeg",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"headScaleOffset\":0.013,\"foreheadHeight\":0.03,\"foreheadRound\":1},\"hairID\":8,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":3,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.079,\"heightOffset\":0,\"scale\":2.655,\"twist\":-16.962,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":8,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":-0.004,\"heightOffset\":0.079,\"scale\":3.461,\"twist\":0.625,\"distanceAngle\":46.177,\"leftRightAngle\":0},\"mouthID\":4,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.965,\"g\":0.6,\"b\":0.533,\"a\":1},\"height\":-0.103,\"heightOffset\":0,\"scale\":1.961,\"twist\":17.635,\"distanceAngle\":0,\"leftRightAngle\":1.148},\"tailID\":4,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":2,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.303,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/53586991",
+    "categoryKey": "acg",
+    "categoryTitle": "🎮 动漫游戏",
+    "tags": "动漫游戏"
+  },
+  {
+    "id": "animal-619414",
+    "name": "会吓到某些玩家的捏脸",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/25/b81724bbf41e08627312d5cee601ca14.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"headScaleOffset\":-0.025,\"foreheadHeight\":0,\"foreheadRound\":1},\"hairID\":0,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.315,\"b\":0.176,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":1,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.064,\"heightOffset\":0,\"scale\":0.624,\"twist\":0,\"distanceAngle\":30.076,\"leftRightAngle\":0},\"eyebrowID\":1,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0.769,\"g\":0.078,\"b\":0.067,\"a\":1},\"height\":-0.3,\"heightOffset\":0.064,\"scale\":4,\"twist\":-46.08,\"distanceAngle\":0,\"leftRightAngle\":0},\"mouthID\":2,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.012,\"g\":0.663,\"b\":0.957,\"a\":1},\"height\":0.015,\"heightOffset\":0,\"scale\":0.368,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":0,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.678,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.189,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/67177919",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
+  },
+  {
+    "id": "animal-619414",
+    "name": "鲸头鹳！",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/25/187366058f98c5f02997c79c8391d40b.jpeg",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0.69,\"g\":0.745,\"b\":0.773,\"a\":1},\"headScaleOffset\":0.103,\"foreheadHeight\":0.208,\"foreheadRound\":0.744},\"hairID\":2,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.565,\"g\":0.643,\"b\":0.682,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":6,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.129,\"g\":0.129,\"b\":0.129,\"a\":1},\"height\":0.22,\"heightOffset\":0,\"scale\":0.816,\"twist\":0,\"distanceAngle\":35.135,\"leftRightAngle\":0},\"eyebrowID\":5,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.041,\"heightOffset\":0.22,\"scale\":1.587,\"twist\":-15.722,\"distanceAngle\":32.469,\"leftRightAngle\":0},\"mouthID\":26,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.671,\"b\":0.569,\"a\":1},\"height\":0.105,\"heightOffset\":0,\"scale\":0.624,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":3,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":0.69,\"g\":0.745,\"b\":0.773,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":0,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.232,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.69,\"g\":0.745,\"b\":0.773,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/60125766",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
+  },
+  {
+    "id": "animal-619414",
+    "name": "里蓝鸭",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/25/5387e6e19d1b5d996a4aa0d0c5281acd.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0.008,\"g\":0.533,\"b\":0.82,\"a\":1},\"headScaleOffset\":0.4,\"foreheadHeight\":0,\"foreheadRound\":1},\"hairID\":0,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.224,\"g\":0.286,\"b\":0.671,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":11,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.121,\"heightOffset\":0,\"scale\":1.44,\"twist\":45.024,\"distanceAngle\":26.573,\"leftRightAngle\":0},\"eyebrowID\":2,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0.553,\"g\":0.431,\"b\":0.388,\"a\":1},\"height\":-0.123,\"heightOffset\":0.121,\"scale\":2.673,\"twist\":1.2,\"distanceAngle\":0,\"leftRightAngle\":0},\"mouthID\":9,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.627,\"b\":0,\"a\":1},\"height\":0.012,\"heightOffset\":0,\"scale\":0.729,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.008,\"g\":0.533,\"b\":0.82,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/19676880",
+    "categoryKey": "cute",
+    "categoryTitle": "💖 可爱萌物",
+    "tags": "可爱 自然"
+  },
+  {
+    "id": "animal-619414",
+    "name": "纯削弱，不接",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/24/dbd846b92d63425c41ad12a233e47b69.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0.365,\"g\":0.251,\"b\":0.216,\"a\":1},\"headScaleOffset\":0.4,\"foreheadHeight\":0,\"foreheadRound\":1},\"hairID\":15,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.315,\"b\":0.176,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":2,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.3,\"heightOffset\":0,\"scale\":3.716,\"twist\":-90,\"distanceAngle\":90,\"leftRightAngle\":0},\"eyebrowID\":8,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":-0.3,\"heightOffset\":0.3,\"scale\":4,\"twist\":-90,\"distanceAngle\":90,\"leftRightAngle\":0},\"mouthID\":1,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":-0.3,\"heightOffset\":0,\"scale\":4,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":4,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":3,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.149,\"g\":0.196,\"b\":0.22,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/61439560",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
+  },
+  {
+    "id": "animal-619414",
+    "name": "贝利鸭呀",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/24/00a8db8c2c3fb722191a99ac389ea716.jpeg",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"headScaleOffset\":-0.066,\"foreheadHeight\":0.085,\"foreheadRound\":1},\"hairID\":1,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.149,\"g\":0.196,\"b\":0.22,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":1,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.671,\"g\":0.278,\"b\":0.737,\"a\":1},\"height\":-0.165,\"heightOffset\":0,\"scale\":1.037,\"twist\":-63.379,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":2,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0.937,\"g\":0.424,\"b\":0,\"a\":1},\"height\":0.3,\"heightOffset\":-0.165,\"scale\":4,\"twist\":-47.234,\"distanceAngle\":28.879,\"leftRightAngle\":0},\"mouthID\":30,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.329,\"g\":0.431,\"b\":0.478,\"a\":1},\"height\":0.008,\"heightOffset\":0,\"scale\":0.63,\"twist\":1.202,\"distanceAngle\":0,\"leftRightAngle\":3.23},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":0.816,\"g\":0.09,\"b\":0.086,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.749,\"g\":0.212,\"b\":0.047,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.212,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/58870022",
+    "categoryKey": "cute",
+    "categoryTitle": "💖 可爱萌物",
+    "tags": "可爱 自然"
+  },
+  {
+    "id": "animal-619414",
+    "name": "凤凰说是",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/24/6f9079dbdeb1272daabd9ba11be62ef0.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":1,\"g\":0.341,\"b\":0.133,\"a\":1},\"headScaleOffset\":-0.061,\"foreheadHeight\":0.154,\"foreheadRound\":1},\"hairID\":4,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.945,\"b\":0.463,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":6,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.655,\"b\":0.149,\"a\":1},\"height\":0.066,\"heightOffset\":0,\"scale\":2.341,\"twist\":0,\"distanceAngle\":30.032,\"leftRightAngle\":0},\"eyebrowID\":6,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.119,\"heightOffset\":0.066,\"scale\":2.198,\"twist\":-29.935,\"distanceAngle\":19.077,\"leftRightAngle\":0},\"mouthID\":1,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"height\":-0.034,\"heightOffset\":0,\"scale\":0.421,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":3,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.835,\"b\":0.31,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":0,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.835,\"b\":0.31,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/57326833",
+    "categoryKey": "acg",
+    "categoryTitle": "🎮 动漫游戏",
+    "tags": "动漫游戏"
+  },
+  {
+    "id": "animal-619414",
+    "name": "看看我的怎么样",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/24/2b09d94eb9e211679295aa2f49740ea6.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"headScaleOffset\":0.4,\"foreheadHeight\":0.123,\"foreheadRound\":0.35},\"hairID\":6,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":5,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.039,\"g\":0.561,\"b\":0.031,\"a\":1},\"height\":0.119,\"heightOffset\":0,\"scale\":1.748,\"twist\":11.581,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":1,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0.984,\"g\":0.753,\"b\":0.176,\"a\":1},\"height\":0.127,\"heightOffset\":0.119,\"scale\":1.914,\"twist\":-23.016,\"distanceAngle\":21.96,\"leftRightAngle\":0},\"mouthID\":4,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.534,\"b\":0.401,\"a\":1},\"height\":-0.004,\"heightOffset\":0,\"scale\":1.084,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.735,\"b\":0.231,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":1,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":1,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.506,\"g\":0.831,\"b\":0.98,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/13276829",
+    "categoryKey": "meme",
+    "categoryTitle": "🎭 网络热梗",
+    "tags": "网络热梗"
+  },
+  {
+    "id": "animal-619414",
+    "name": "联邦！",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/24/67e4fed6f692321f97ad46f46e55eb65.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0.867,\"g\":0.098,\"b\":0.114,\"a\":1},\"headScaleOffset\":0.4,\"foreheadHeight\":0.003,\"foreheadRound\":1},\"hairID\":0,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.992,\"g\":0.847,\"b\":0.208,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":11,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.922,\"b\":0.231,\"a\":1},\"height\":0.073,\"heightOffset\":0,\"scale\":4,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":2,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.835,\"b\":0.31,\"a\":1},\"height\":0.005,\"heightOffset\":0.073,\"scale\":4,\"twist\":-90,\"distanceAngle\":8.121,\"leftRightAngle\":0},\"mouthID\":18,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.992,\"g\":0.847,\"b\":0.208,\"a\":1},\"height\":-0.069,\"heightOffset\":0,\"scale\":0.97,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.735,\"b\":0.231,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.957,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":0,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.002,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.769,\"g\":0.078,\"b\":0.067,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/26669382",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
+  },
+  {
+    "id": "animal-619414",
+    "name": "我也不知道芝士神魔",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/23/5cd17e227804840808b6e93554dad187.jpeg",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"headScaleOffset\":0.001,\"foreheadHeight\":0,\"foreheadRound\":0.35},\"hairID\":15,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.902,\"g\":0.933,\"b\":0.612,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":11,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":-0.028,\"heightOffset\":0,\"scale\":4,\"twist\":45.313,\"distanceAngle\":17.059,\"leftRightAngle\":0},\"eyebrowID\":2,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.341,\"b\":0.133,\"a\":1},\"height\":0.008,\"heightOffset\":-0.028,\"scale\":1.896,\"twist\":-90,\"distanceAngle\":0,\"leftRightAngle\":0},\"mouthID\":30,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.902,\"g\":0.933,\"b\":0.612,\"a\":1},\"height\":0.157,\"heightOffset\":0,\"scale\":0.717,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":3,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.341,\"b\":0.133,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":0,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.961,\"b\":0.616,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/13630139",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
+  },
+  {
+    "id": "pingu-619414",
+    "name": "PINGU",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/23/2476326c22e8bbe31136211fdc93395d.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"headScaleOffset\":-0.251,\"foreheadHeight\":0.05,\"foreheadRound\":1},\"hairID\":0,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.471,\"g\":0.565,\"b\":0.612,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":3,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.069,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":39.258,\"leftRightAngle\":0},\"eyebrowID\":1,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0.867,\"g\":0.098,\"b\":0.114,\"a\":1},\"height\":-0.111,\"heightOffset\":0.069,\"scale\":3.123,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"mouthID\":4,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.898,\"g\":0.11,\"b\":0.137,\"a\":1},\"height\":-0.011,\"heightOffset\":0,\"scale\":0.3,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":0.878,\"g\":0.878,\"b\":0.878,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":0,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/21554458",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
+  },
+  {
+    "id": "animal-619414",
+    "name": "小黄人",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/23/6723906a3bdfe5c07feb224df8990c89.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"headScaleOffset\":0,\"foreheadHeight\":0.081,\"foreheadRound\":1},\"hairID\":2,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":12,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.376,\"g\":0.49,\"b\":0.545,\"a\":1},\"height\":0.112,\"heightOffset\":0,\"scale\":2.53,\"twist\":13.887,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":8,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":-0.008,\"heightOffset\":0.112,\"scale\":3.218,\"twist\":0,\"distanceAngle\":45.601,\"leftRightAngle\":0},\"mouthID\":9,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.154,\"heightOffset\":0,\"scale\":2.151,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":-4.458},\"tailID\":4,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.922,\"b\":0.231,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":1,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.7,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/21554458",
+    "categoryKey": "acg",
+    "categoryTitle": "🎮 动漫游戏",
+    "tags": "动漫游戏"
+  },
+  {
+    "id": "animal-619414",
+    "name": "贝利鸭",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/23/a56f060dd181efb5779cd26124ef9e2b.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"headScaleOffset\":0,\"foreheadHeight\":0,\"foreheadRound\":1},\"hairID\":1,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":1,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.557,\"g\":0.141,\"b\":0.667,\"a\":1},\"height\":-0.269,\"heightOffset\":0,\"scale\":0.776,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":1,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.561,\"b\":0,\"a\":1},\"height\":0.3,\"heightOffset\":-0.269,\"scale\":4,\"twist\":-51.847,\"distanceAngle\":35.798,\"leftRightAngle\":0},\"mouthID\":30,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":-0.096,\"heightOffset\":0,\"scale\":0.681,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.735,\"b\":0.231,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.769,\"g\":0.078,\"b\":0.067,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/21554458",
+    "categoryKey": "cute",
+    "categoryTitle": "🎮 动漫游戏",
+    "tags": "奥特曼 抽象"
+  },
+  {
+    "id": "animal-619414",
+    "name": "宇智波佐助",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/23/cbdeeebc6fec42b57f0a731ba2eeb950.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"headScaleOffset\":0,\"foreheadHeight\":0.07,\"foreheadRound\":1},\"hairID\":16,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.149,\"g\":0.196,\"b\":0.22,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":13,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.898,\"g\":0.11,\"b\":0.137,\"a\":1},\"height\":0.089,\"heightOffset\":0,\"scale\":0.9,\"twist\":0,\"distanceAngle\":29.6,\"leftRightAngle\":0},\"eyebrowID\":8,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.075,\"heightOffset\":0.089,\"scale\":1.149,\"twist\":-23.593,\"distanceAngle\":30.176,\"leftRightAngle\":0},\"mouthID\":6,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.534,\"b\":0.401,\"a\":1},\"height\":0.018,\"heightOffset\":0,\"scale\":1.926,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":3,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":0.557,\"g\":0.141,\"b\":0.667,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":2,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.129,\"g\":0.129,\"b\":0.129,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/12294228",
+    "categoryKey": "abstract",
+    "categoryTitle": "🎮 动漫游戏",
+    "tags": "动漫 创意"
+  },
+  {
+    "id": "animal-619414",
+    "name": "条顿确实",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/23/e070e878129ec4312ddce0bef0dde342.png",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"headScaleOffset\":-0.053,\"foreheadHeight\":0,\"foreheadRound\":1},\"hairID\":0,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.315,\"b\":0.176,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":11,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.02,\"heightOffset\":0,\"scale\":3.713,\"twist\":-7.274,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyebrowID\":0,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":-0.109,\"heightOffset\":0.02,\"scale\":1,\"twist\":0,\"distanceAngle\":41.184,\"leftRightAngle\":0},\"mouthID\":30,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.984,\"g\":0.753,\"b\":0.176,\"a\":1},\"height\":0.3,\"heightOffset\":0,\"scale\":0.592,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":0,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.735,\"b\":0.231,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":1,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":1,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.302,\"g\":0.816,\"b\":0.882,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/63727444",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
+  },
+  {
+    "id": "animal-619415",
+    "name": "阿姆斯特朗炮",
+    "image": "https://imgheybox.max-c.com/bbs/2025/10/23/246dba0c0d3c5b70bac3858e8baf6c2d.jpeg",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"headScaleOffset\":0.4,\"foreheadHeight\":0,\"foreheadRound\":0.35},\"hairID\":0,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":12,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"height\":-0.3,\"heightOffset\":0,\"scale\":4,\"twist\":-57.872,\"distanceAngle\":90,\"leftRightAngle\":0},\"eyebrowID\":0,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"height\":0.3,\"heightOffset\":-0.3,\"scale\":4,\"twist\":90,\"distanceAngle\":90,\"leftRightAngle\":0},\"mouthID\":15,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"height\":0.3,\"heightOffset\":0,\"scale\":3.937,\"twist\":90,\"distanceAngle\":0,\"leftRightAngle\":33.583},\"tailID\":1,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.5,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0.933,\"g\":0.933,\"b\":0.933,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":2,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/user/profile/81088124",
+    "categoryKey": "abstract",
+    "categoryTitle": "🤪 抽象搞怪",
+    "tags": "抽象 创意"
   }
 ];
