@@ -985,5 +985,15 @@ window.yakovAnimalsData = [
     "categoryKey": "abstract",
     "categoryTitle": "🤪 抽象搞怪",
     "tags": "抽象 创意"
+  },
+  {
+    "id": "animal-493018",
+    "name": "蚀金玫瑰",
+    "image": "https://imgheybox1.max-c.com/bbs/2025/10/31/5c682a13e1725795d7f1e280862a7632/thumb.jpeg?imageMogr2/format/webp/quality/50/auto-orient/ignore-error/1",
+    "code": "{\"savedSetting\":false,\"headSetting\":{\"mainColor\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"headScaleOffset\":0,\"foreheadHeight\":0.07,\"foreheadRound\":1},\"hairID\":10,\"hairInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":1,\"b\":1,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"eyeID\":10,\"eyeInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"height\":0.073,\"heightOffset\":0,\"scale\":1.695,\"twist\":-29.07,\"distanceAngle\":7.977,\"leftRightAngle\":0},\"eyebrowID\":5,\"eyebrowInfo\":{\"radius\":0.23,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0.086,\"heightOffset\":0.073,\"scale\":3.532,\"twist\":-11.484,\"distanceAngle\":15.04,\"leftRightAngle\":0},\"mouthID\":14,\"mouthInfo\":{\"radius\":0.23,\"color\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"height\":0.22,\"heightOffset\":0,\"scale\":0.895,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"tailID\":3,\"tailInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.933,\"b\":0.345,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":0.712,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"footID\":2,\"footInfo\":{\"radius\":0,\"color\":{\"r\":1,\"g\":0.403,\"b\":0.203,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.136,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0},\"wingID\":0,\"wingInfo\":{\"radius\":0,\"color\":{\"r\":0,\"g\":0,\"b\":0,\"a\":1},\"height\":0,\"heightOffset\":0,\"scale\":1.347,\"twist\":0,\"distanceAngle\":0,\"leftRightAngle\":0}}",
+    "sourceUrl": "https://www.xiaoheihe.cn/app/bbs/link/015971144201",
+    "categoryKey": "abstract",
+    "categoryTitle": "🎮 动漫游戏",
+    "tags": "三角洲 红狼"
   }
 ];
